@@ -1,0 +1,165 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\user\Desktop\Computer Organization\alu
+vALU
+Z1 ICaRY[kZHdOi`hRDedEc3@1
+Z2 VCzaabM8N=RUY_S0<X_B]k3
+Z3 dC:\Users\user\Desktop\Computer Organization\alu
+Z4 w1320922542
+Z5 8C:/Users/user/Desktop/Computer Organization/alu/ALU.v
+Z6 FC:/Users/user/Desktop/Computer Organization/alu/ALU.v
+L0 2
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@a@l@u
+Z10 !s100 ZaTLR`8[0BLYUU`PUNP?=3
+Z11 !s108 1714460760.536000
+Z12 !s107 C:/Users/user/Desktop/Computer Organization/alu/ALU.v|
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUControl
+Z14 IBIPin`B4WLIJAzXYG;^?T2
+Z15 VNAH>_8RLHL1WH7=?Cf;YD2
+R3
+Z16 w1321004898
+Z17 8C:/Users/user/Desktop/Computer Organization/alu/ALUControl.v
+Z18 FC:/Users/user/Desktop/Computer Organization/alu/ALUControl.v
+L0 2
+R7
+r1
+31
+R8
+Z19 n@a@l@u@control
+Z20 !s100 ZS28T:zSLP_nUZ2YB55EV2
+Z21 !s108 1714460763.232000
+Z22 !s107 C:/Users/user/Desktop/Computer Organization/alu/ALUControl.v|
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/ALUControl.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDivider
+Z24 I0a]>f;=Ye0nNTEcbX3WVY2
+Z25 VX=8Ml78WTMmzzggSohMLG0
+R3
+Z26 w1321004884
+Z27 8C:/Users/user/Desktop/Computer Organization/alu/Divider.v
+Z28 FC:/Users/user/Desktop/Computer Organization/alu/Divider.v
+L0 2
+R7
+r1
+31
+R8
+Z29 n@divider
+Z30 !s100 ULn^ieI?]GgMi15cE7cj82
+Z31 !s108 1714460766.986000
+Z32 !s107 C:/Users/user/Desktop/Computer Organization/alu/Divider.v|
+Z33 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/Divider.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vHiLo
+Z34 IbQ2UhoDYUCNkUfRoP3@=C3
+Z35 VZJC]P8[ZOXEbfhie@>RHM3
+R3
+Z36 w1320922566
+Z37 8C:/Users/user/Desktop/Computer Organization/alu/HiLo.v
+Z38 FC:/Users/user/Desktop/Computer Organization/alu/HiLo.v
+L0 2
+R7
+r1
+31
+R8
+Z39 n@hi@lo
+Z40 !s100 BVaJelYFL?iQ?H:I;PRF60
+Z41 !s108 1714460768.763000
+Z42 !s107 C:/Users/user/Desktop/Computer Organization/alu/HiLo.v|
+Z43 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/HiLo.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX
+Z44 I2KT<BnT_ML2>7SmRmO60C3
+Z45 VZ2l_iim`D26Yl]V_H_VLP0
+R3
+Z46 w1320922578
+Z47 8C:/Users/user/Desktop/Computer Organization/alu/MUX.v
+Z48 FC:/Users/user/Desktop/Computer Organization/alu/MUX.v
+L0 2
+R7
+r1
+31
+R8
+Z49 n@m@u@x
+Z50 !s100 mRbEQn0cN?g8zmSPV4OR[1
+Z51 !s108 1714460770.497000
+Z52 !s107 C:/Users/user/Desktop/Computer Organization/alu/MUX.v|
+Z53 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/MUX.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShifter
+Z54 Im17QYl186L?CGT23P3hal0
+Z55 V[ik3778AXTTM`oYV?NK]H3
+R3
+Z56 w1320922588
+Z57 8C:/Users/user/Desktop/Computer Organization/alu/Shifter.v
+Z58 FC:/Users/user/Desktop/Computer Organization/alu/Shifter.v
+L0 2
+R7
+r1
+31
+R8
+Z59 n@shifter
+Z60 !s100 FOj_cc;kfjd4IfeH?gmZ^0
+Z61 !s108 1714460772.065000
+Z62 !s107 C:/Users/user/Desktop/Computer Organization/alu/Shifter.v|
+Z63 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/Shifter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_ALU
+Z64 ImAGnlgKCT?9aMm8loK_2Z0
+Z65 VJ;TnOjHFn3KbASFPGPEl41
+R3
+Z66 w1321005058
+Z67 8C:/Users/user/Desktop/Computer Organization/alu/tb_ALU.v
+Z68 FC:/Users/user/Desktop/Computer Organization/alu/tb_ALU.v
+L0 2
+R7
+r1
+31
+R8
+Z69 ntb_@a@l@u
+!i10b 1
+Z70 !s100 eXj`>NBaII=@a;J^LP@lf3
+!s85 0
+Z71 !s108 1714460773.614000
+Z72 !s107 C:/Users/user/Desktop/Computer Organization/alu/tb_ALU.v|
+Z73 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/tb_ALU.v|
+!s101 -O0
+vTotalALU
+!i10b 1
+!s100 AH`hdT^3U85WBNXHGIiX10
+IDelUJi>?FBKVL]@9fBGFd3
+V8YPe[O^iA3711lZ=R7=GX0
+R3
+w1320889968
+8C:/Users/user/Desktop/Computer Organization/alu/TotalALU.v
+FC:/Users/user/Desktop/Computer Organization/alu/TotalALU.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1714460775.290000
+!s107 C:/Users/user/Desktop/Computer Organization/alu/TotalALU.v|
+!s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/TotalALU.v|
+!s101 -O0
+R8
+n@total@a@l@u
