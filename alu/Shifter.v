@@ -11,6 +11,11 @@ reg [31:0] temp ;
 
 parameter SRL = 6'b000010;
 
+MUX2_1 mux_1( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
+MUX2_1 mux_2( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
+MUX2_1 mux_3( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
+MUX2_1 mux_4( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
+
 /*
 =====================================================
 下面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫

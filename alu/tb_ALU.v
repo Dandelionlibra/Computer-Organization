@@ -44,12 +44,12 @@ module tb_ALU();
 			else if ( ctrl == 6'd32 ) $write( "ADD(%d) ", ctrl );
 			else if ( ctrl == 6'd34 ) $write( "SUB(%d) ", ctrl );
 			else if ( ctrl == 6'd42 ) $write( "SLT(%d) ", ctrl );
-			else if ( ctrl == 6'd2 ) $write( "SRL(%d) ", ctrl );
-			else if ( ctrl == 6'd27 ) $write( "DIVU(%d) ", ctrl );
+			else if ( ctrl == 6'd0 ) $write( "SLL(%d) ", ctrl );
+			else if ( ctrl == 6'd25 ) $write( "MULTU(%d) ", ctrl );
 			$display( "%d%d", inputA, inputB  );
-			if ( ctrl == 32'd27 ) begin
+			if ( ctrl == 32'd25 ) begin
 				#330;
-				$display( "%d: Div End\n", $time/10 );
+				$display( "%d: Mul End\n", $time/10 );
 				/*
 					除法器執行結束後，答案存至Hi-Lo暫存器
 					以下自動產生MFHI, MFLO指令檢查除法運算結果

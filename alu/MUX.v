@@ -16,9 +16,9 @@ parameter ADD = 6'b100000;
 parameter SUB = 6'b100010;
 parameter SLT = 6'b101010;
 
-parameter SRL = 6'b000010;
+parameter SLL = 6'b000000;
 
-parameter DIVU= 6'b011011;
+parameter MULTU= 6'b011001;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
 /*
@@ -31,36 +31,21 @@ parameter MFLO= 6'b010010;
 */
 always@( ALUOut or HiOut or LoOut or Shifter or Signal )
 begin
+	if (Signal == AND)
+		temp = ALUOut;
+	else if (Signal == OR)
+		temp = ALUOut;
+	else if (Signal == ADD)
+		temp = ALUOut;
+	else if (Signal == SUB)
+		temp = ALUOut;
+	else if (Signal == SLT)
+		temp = ALUOut;
+	else if (Signal == MFHI)
+		temp = HiOut;
+	else if (Signal == MFLO)
+		temp = LoOut;
 
-	case ( Signal )
-	AND:
-	begin
-		temp = ALUOut ;
-	end
-	OR:
-	begin
-		temp = ALUOut ;
-	end
-	ADD:
-	begin
-		temp = ALUOut ;
-	end
-	SUB:
-	begin
-		temp = ALUOut ;
-	end
-	SLT:
-	begin
-		temp = ALUOut ;
-	end
-	MFHI:
-	begin
-		temp = HiOut ;
-	end
-	MFLO:
-	begin
-		temp = LoOut ;
-	end
 /*
 ===========
    重要
@@ -73,13 +58,13 @@ MFHI和MFLO
    重要
 ===========
 */
-	SRL:
-	begin
-		temp = Shifter ;
-	end
-	default: temp = 32'b0 ;	
 	
-	endcase
+	if (Signal == SLL)
+		temp = Shifter;
+	else
+		temp = 32'b0;
+
+	
 /*
 上面這個case是在做訊號處理
 分別根據傳進來的signal來選擇不同的輸入來源
