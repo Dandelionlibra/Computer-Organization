@@ -11,14 +11,14 @@ reg [31:0] temp ;
 
 parameter SRL = 6'b000010;
 
-MUX2_1 mux_1( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
+MUX2_1 mux_1( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) );
 MUX2_1 mux_2( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
 MUX2_1 mux_3( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
 MUX2_1 mux_4( .ALUOut(dataOut[0]), .Shifter(), .Signal(Signal), .dataOut(dataOut) )
 
 /*
 =====================================================
-¤U­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ð¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½Ò¡Aï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ð¿ï¿½ï¿½Ó¦Ñ®vï¿½Wï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½Ó¼g
 =====================================================
 */
 always@( Signal or dataA or dataB or reset )
@@ -28,7 +28,7 @@ begin
 		temp = 32'b0 ;
 	end
 /*
-reset°T¸¹ ¦pªG¬Oreset´N°µÂk0
+resetï¿½Tï¿½ï¿½ ï¿½pï¿½Gï¿½Oresetï¿½Nï¿½ï¿½ï¿½k0
 */
 	else
 	begin
@@ -42,13 +42,13 @@ reset°T¸¹ ¦pªG¬Oreset´N°µÂk0
 		endcase
 	end
 /*
-²¾¦ì¾¹¹Bºâ
+ï¿½ï¿½ï¿½ì¾¹ï¿½Bï¿½ï¿½
 */
 end
 assign dataOut = temp ;
 /*
 =====================================================
-¤W­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ð¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½Ò¡Aï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ð¿ï¿½ï¿½Ó¦Ñ®vï¿½Wï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½Ó¼g
 =====================================================
 */
 
