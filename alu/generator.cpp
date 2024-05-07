@@ -13,15 +13,27 @@
 #include <vector>
 
 __attribute__((constructor)) void before_main() {
-    for (int j = 1; j < 6; j++) {
-        for (int i = 1, dataB = 0; i < 33; i++) {
-            if (i == 32)
-                std::cout << "MUX2_1 mux" << j << "_" << i << "( .in0(dataA[" << i << "]), 0, .sel(dataB["
-                          << j - 1 << "]), .out(temp0[" << i - 1 << "]) )" << std::endl;
+    for (int j = 1 ; j < 6 ; j++) {
+        for (int i = 31 ; i >= 0 ; i--) {
+            if (i == 31)
+                std::cout << "MUX2_1 mux" << j << "_" << 31-i << "( 0, .in1(dataA["
+                          << i << "]), .Signal(dataB[" << j - 1 << "]), .dataOut(temp[" << 31-i << "]) )"
+                          << std::endl;
+            else
+                std::cout << "MUX2_1 mux" << j << "_" << 31-i << "( .in0(dataA[" << i+1 << "]), .in1(dataA["
+                          << i << "]), .Signal(dataB[" << j - 1 << "]), .dataOut(temp[" << 31-i << "]) )"
+                          << std::endl;
+
+
+            /*
+            if (i == 0)
+                std::cout << "MUX2_1 mux" << j << "_" << i << "( .in0(dataA[" << i << "]), 0, .Signal(dataB["
+                          << j - 1 << "]), .dataOut(temp[" << i << "]) )" << std::endl;
             else
                 std::cout << "MUX2_1 mux" << j << "_" << i << "( .in0(dataA[" << i << "]), .in1(dataA["
-                          << i + 1 << "]), .sel(dataB[" << j - 1 << "]), .out(temp0[" << i - 1 << "]) )"
+                          << i + 1 << "]), .Signal(dataB[" << j - 1 << "]), .dataOut(temp[" << i << "]) )"
                           << std::endl;
+            */
         }
 
         std::cout << std::endl;

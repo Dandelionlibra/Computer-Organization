@@ -16,65 +16,80 @@ parameter ADD = 6'b100000;
 parameter SUB = 6'b100010;
 parameter SLT = 6'b101010;
 
-parameter SLL = 6'b000000;
+parameter SRL = 6'b000010;
 
-parameter MULTU= 6'b011001;
+parameter DIVU= 6'b011011;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
 /*
-©w¸q¦UºØ°T¸¹
+å®šç¾©å„ç¨®è¨Šè™Ÿ
 */
 /*
 =====================================================
-¤U­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ğ¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ä¸‹é¢ç‚ºæ¨¡æ“¬ç¯„ä¾‹ï¼Œç¨‹å¼æ’°å¯«è«‹éµç…§è€å¸«ä¸Šèª²èªªæ˜çš„æ–¹æ³•ä¾†å¯«
 =====================================================
 */
 always@( ALUOut or HiOut or LoOut or Shifter or Signal )
 begin
-	if (Signal == AND)
-		temp = ALUOut;
-	else if (Signal == OR)
-		temp = ALUOut;
-	else if (Signal == ADD)
-		temp = ALUOut;
-	else if (Signal == SUB)
-		temp = ALUOut;
-	else if (Signal == SLT)
-		temp = ALUOut;
-	else if (Signal == MFHI)
-		temp = HiOut;
-	else if (Signal == MFLO)
-		temp = LoOut;
 
+	case ( Signal )
+	AND:
+	begin
+		temp = ALUOut ;
+	end
+	OR:
+	begin
+		temp = ALUOut ;
+	end
+	ADD:
+	begin
+		temp = ALUOut ;
+	end
+	SUB:
+	begin
+		temp = ALUOut ;
+	end
+	SLT:
+	begin
+		temp = ALUOut ;
+	end
+	MFHI:
+	begin
+		temp = HiOut ;
+	end
+	MFLO:
+	begin
+		temp = LoOut ;
+	end
 /*
 ===========
-   ­«­n
+   é‡è¦
 ===========
-MFHI©MMFLO
-³o¨â¹D«ü¥O¤@©w­n¥[¶i¨Ó
-³o¬O§âHILO¼È¦s¾¹ªº­È¿é¥Xªº«ü¥O
-½Ğ§O§Ñ°O
+MFHIå’ŒMFLO
+é€™å…©é“æŒ‡ä»¤ä¸€å®šè¦åŠ é€²ä¾†
+é€™æ˜¯æŠŠHILOæš«å­˜å™¨çš„å€¼è¼¸å‡ºçš„æŒ‡ä»¤
+è«‹åˆ¥å¿˜è¨˜
 ===========
-   ­«­n
+   é‡è¦
 ===========
 */
+	SRL:
+	begin
+		temp = Shifter ;
+	end
+	default: temp = 32'b0 ;	
 	
-	if (Signal == SLL)
-		temp = Shifter;
-	else
-		temp = 32'b0;
-
-	
+	endcase
 /*
-¤W­±³o­Ócase¬O¦b°µ°T¸¹³B²z
-¤À§O®Ú¾Ú¶Ç¶i¨Óªºsignal¨Ó¿ï¾Ü¤£¦Pªº¿é¤J¨Ó·½
-µM«á©ñ¶i¼È¦s¾¹¦A¿é¥X
+ä¸Šé¢é€™å€‹caseæ˜¯åœ¨åšè¨Šè™Ÿè™•ç†
+åˆ†åˆ¥æ ¹æ“šå‚³é€²ä¾†çš„signalä¾†é¸æ“‡ä¸åŒçš„è¼¸å…¥ä¾†æº
+ç„¶å¾Œæ”¾é€²æš«å­˜å™¨å†è¼¸å‡º
 */
 end
 assign dataOut = temp ;
 /*
 =====================================================
-¤W­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ğ¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ä¸Šé¢ç‚ºæ¨¡æ“¬ç¯„ä¾‹ï¼Œç¨‹å¼æ’°å¯«è«‹éµç…§è€å¸«ä¸Šèª²èªªæ˜çš„æ–¹æ³•ä¾†å¯«
 =====================================================
 */
 
