@@ -137,14 +137,13 @@ r1
 Z69 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/tb_ALU.v|
 R10
 Z70 ntb_@a@l@u
-!i10b 1
 Z71 !s100 j5SM?f_oJXCN96jf7hN5l0
-!s85 0
 Z72 !s108 1714464371.789000
 Z73 !s107 C:/Users/user/Desktop/Computer Organization/alu/tb_ALU.v|
+!i10b 1
+!s85 0
 !s101 -O0
 vTotalALU
-!i10b 1
 Z74 !s100 AH`hdT^3U85WBNXHGIiX10
 Z75 IDelUJi>?FBKVL]@9fBGFd3
 Z76 V8YPe[O^iA3711lZ=R7=GX0
@@ -155,11 +154,12 @@ Z79 FC:/Users/user/Desktop/Computer Organization/alu/TotalALU.v
 L0 2
 R8
 r1
-!s85 0
 31
-!s108 1714464373.579000
-!s107 C:/Users/user/Desktop/Computer Organization/alu/TotalALU.v|
 Z80 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/alu/TotalALU.v|
-!s101 -O0
 R10
 Z81 n@total@a@l@u
+!i10b 1
+!s85 0
+Z82 !s108 1714464373.579000
+Z83 !s107 C:/Users/user/Desktop/Computer Organization/alu/TotalALU.v|
+!s101 -O0
