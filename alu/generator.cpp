@@ -13,30 +13,14 @@
 #include <vector>
 
 __attribute__((constructor)) void before_main() {
-    for (int j = 1 ; j < 6 ; j++) {
-        for (int i = 31 ; i >= 0 ; i--) {
-            if (i == 31)
-                std::cout << "MUX2_1 mux" << j << "_" << 31-i << "( 0, .in1(dataA["
-                          << i << "]), .Signal(dataB[" << j - 1 << "]), .dataOut(temp[" << 31-i << "]) )"
-                          << std::endl;
-            else
-                std::cout << "MUX2_1 mux" << j << "_" << 31-i << "( .in0(dataA[" << i+1 << "]), .in1(dataA["
-                          << i << "]), .Signal(dataB[" << j - 1 << "]), .dataOut(temp[" << 31-i << "]) )"
-                          << std::endl;
-
-
-            /*
-            if (i == 0)
-                std::cout << "MUX2_1 mux" << j << "_" << i << "( .in0(dataA[" << i << "]), 0, .Signal(dataB["
-                          << j - 1 << "]), .dataOut(temp[" << i << "]) )" << std::endl;
-            else
-                std::cout << "MUX2_1 mux" << j << "_" << i << "( .in0(dataA[" << i << "]), .in1(dataA["
-                          << i + 1 << "]), .Signal(dataB[" << j - 1 << "]), .dataOut(temp[" << i << "]) )"
-                          << std::endl;
-            */
-        }
-
-        std::cout << std::endl;
+    int j = 0;
+    int t = 0;
+    for (int i = 31 ; i >= 0 ; i--) {
+        std::cout << "MUX2_1 mux5" << "_" << j << "( .in0(temp3[" << i << "]), .in1(temp3[" << i-16
+                  << "]), .sel(dataB[" << 4 << "]), .out(temp4[" << t << "]) )\n";
+        j++;
+        t++;
     }
+    std::cout << std::endl;
 }
 int main() { std::cout << "OwO\n"; }
