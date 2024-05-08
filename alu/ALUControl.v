@@ -12,9 +12,9 @@ output [5:0] SignaltoMUX ;
 //   OR   : 37
 //   ADD  : 32
 //   SUB  : 34
-//   SRL  : 2
 //   SLT  : 42
-//   DIVU : 27
+//   SLL  : 00
+//   MULTU: 25
 
 
 reg [5:0] temp ;
@@ -26,53 +26,49 @@ parameter OR  = 6'b100101;
 parameter ADD = 6'b100000;
 parameter SUB = 6'b100010;
 parameter SLT = 6'b101010;
-
-parameter SRL = 6'b000010;
-
-parameter DIVU= 6'b011011;
-parameter MFHI= 6'b010000;
-parameter MFLO= 6'b010010;
+parameter SLL = 6'b000000;
+parameter MULTU= 6'b011001;
 /*
-ï¿½wï¿½qï¿½Uï¿½Ø°Tï¿½ï¿½
+©w¸q¦UºØ°T¸¹
 */
 
 /*
 =====================================================
-ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½Ò¡Aï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ð¿ï¿½ï¿½Ó¦Ñ®vï¿½Wï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½Ó¼g
+¤U­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ð¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
 =====================================================
 */
 always@( Signal )
 begin
-  if ( Signal == DIVU )
+  if ( Signal == MULTU )
   begin
     counter = 0 ;
   end
 /*
-ï¿½pï¿½Gï¿½Tï¿½ï¿½ï¿½ï¿½ï¿½Ü¦ï¿½ï¿½ï¿½ï¿½k ï¿½Nï¿½ï¿½counterï¿½k0
+¦pªG°T¸¹§ïÅÜ¦¨°£(­¼)ªk ´N§âcounterÂk0
 */
 end
 
 always@( posedge clk )
 begin
   temp = Signal ;
-  if ( Signal == DIVU )
+  if ( Signal == MULTU )
   begin
     counter = counter + 1 ;
     if ( counter == 32 )
     begin
-      temp = 6'b111111 ; // Open HiLo reg for Div
+      temp = 6'b111111 ; // Open HiLo reg for Div( Mul)
       counter = 0 ;
     end
   end
 /*
-ï¿½ï¿½32ï¿½ï¿½clkï¿½Mï¿½ï¿½}ï¿½ï¿½HiLoï¿½È¦sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½ï¿½ï¿½ï¿½È¶iï¿½h
+¼Æ32­ÓclkµM«á¶}±ÒHiLo¼È¦s¾¹µ¹­¼ªk¾¹©ñ­È¶i¥h
 */
 end
 
 
 assign SignaltoALU = temp ;
 assign SignaltoSHT = temp ;
-assign SignaltoDIV = temp ;
+assign SignaltoMULTU = temp ;
 assign SignaltoMUX = temp ;
 
 

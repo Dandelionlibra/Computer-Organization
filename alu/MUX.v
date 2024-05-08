@@ -29,6 +29,7 @@ parameter MFLO= 6'b010010;
 下面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫
 =====================================================
 */
+/*
 always@( ALUOut or HiOut or LoOut or Shifter or Signal )
 begin
 
@@ -61,6 +62,7 @@ begin
 	begin
 		temp = LoOut ;
 	end
+    */
 /*
 ===========
    重要
@@ -73,6 +75,7 @@ MFHI和MFLO
    重要
 ===========
 */
+/*
 	SRL:
 	begin
 		temp = Shifter ;
@@ -80,13 +83,16 @@ MFHI和MFLO
 	default: temp = 32'b0 ;	
 	
 	endcase
+    */
 /*
 上面這個case是在做訊號處理
 分別根據傳進來的signal來選擇不同的輸入來源
 然後放進暫存器再輸出
 */
+/*
 end
-assign dataOut = temp ;
+*/
+assign dataOut = (Signal == MFHI) ? HiOut : (Signal == MFLO) ? LoOut : temp ;
 /*
 =====================================================
 上面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫

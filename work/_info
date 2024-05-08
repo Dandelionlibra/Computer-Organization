@@ -1,0 +1,225 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Coding\Computer-Organization
+vALU
+Z1 Iz9<^eN^eD3^]oDHIdo[eC3
+Z2 VCzaabM8N=RUY_S0<X_B]k3
+Z3 dE:\Coding\Computer-Organization
+Z4 w1715072472
+Z5 8E:/Coding/Computer-Organization/alu/ALU.v
+Z6 FE:/Coding/Computer-Organization/alu/ALU.v
+L0 3
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@a@l@u
+Z10 !s100 L;RXZhKSX4]i0=C0lO:`V0
+Z11 !s108 1715211432.260000
+Z12 !s107 E:/Coding/Computer-Organization/alu/ALU.v|
+Z13 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/ALU.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUbit
+Z14 I>11Bd=_;D;7P98jnci9IK0
+Z15 VQQ[lEB6417W5o^mA`h@@i2
+R3
+Z16 w1715068981
+Z17 8E:/Coding/Computer-Organization/alu/ALUbit.v
+Z18 FE:/Coding/Computer-Organization/alu/ALUbit.v
+L0 3
+R7
+r1
+31
+R8
+Z19 n@a@l@ubit
+Z20 !s100 nHDhjC:]>eO=PXaX`8CJ61
+Z21 !s108 1715211432.394000
+Z22 !s107 E:/Coding/Computer-Organization/alu/ALUbit.v|
+Z23 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/ALUbit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vALUControl
+Z24 I_?3z:D]badkSI?FX]N`l]1
+Z25 Vo?Rm8VWRSzQ1h4:o`kiVD0
+R3
+Z26 w1715209824
+Z27 8E:/Coding/Computer-Organization/alu/ALUControl.v
+Z28 FE:/Coding/Computer-Organization/alu/ALUControl.v
+L0 2
+R7
+r1
+31
+R8
+Z29 n@a@l@u@control
+Z30 !s100 aN5BG4^?6P9UT8GB8ABMm0
+Z31 !s108 1715211432.436000
+Z32 !s107 E:/Coding/Computer-Organization/alu/ALUControl.v|
+Z33 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/ALUControl.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vFullAdder
+Z34 IUYmaSeU@n_Y<cg7^bb:^;2
+Z35 VcII[::[2R5ZmPZ9a@hG292
+R3
+Z36 w1715067356
+Z37 8E:/Coding/Computer-Organization/alu/FullAdder.v
+Z38 FE:/Coding/Computer-Organization/alu/FullAdder.v
+L0 3
+R7
+r1
+31
+R8
+Z39 n@full@adder
+Z40 !s100 RUTL<XZS=R;gcX:eaoe5c2
+Z41 !s108 1715211432.519000
+Z42 !s107 E:/Coding/Computer-Organization/alu/FullAdder.v|
+Z43 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/FullAdder.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vHiLo
+Z44 Ia]72ddj7XZ_>]_Em91zh>2
+Z45 VZJC]P8[ZOXEbfhie@>RHM3
+R3
+Z46 w1714470846
+Z47 8E:/Coding/Computer-Organization/alu/HiLo.v
+Z48 FE:/Coding/Computer-Organization/alu/HiLo.v
+L0 2
+R7
+r1
+31
+R8
+Z49 n@hi@lo
+Z50 !s100 >2ioU@IRERbd:MXZM`;gD2
+Z51 !s108 1715211432.558000
+Z52 !s107 E:/Coding/Computer-Organization/alu/HiLo.v|
+Z53 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/HiLo.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMultiplier
+Z54 I0AD_=oMeVb0g01?@nHNi`3
+Z55 VoJh;4`P^m2Pco7c5=dloT3
+R3
+Z56 w1715211348
+Z57 8E:/Coding/Computer-Organization/alu/Divider.v
+Z58 FE:/Coding/Computer-Organization/alu/Divider.v
+L0 2
+R7
+r1
+31
+R8
+Z59 n@multiplier
+Z60 !s100 PE;j4CY?`jOJE:ElafhiG1
+Z61 !s108 1715211432.478000
+Z62 !s107 E:/Coding/Computer-Organization/alu/Divider.v|
+Z63 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/Divider.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX
+Z64 I@>V<jC0RBE3A4z>_AmTS43
+Z65 VZ2l_iim`D26Yl]V_H_VLP0
+R3
+Z66 w1715209414
+Z67 8E:/Coding/Computer-Organization/alu/MUX.v
+Z68 FE:/Coding/Computer-Organization/alu/MUX.v
+L0 2
+R7
+r1
+31
+R8
+Z69 n@m@u@x
+Z70 !s100 eVdf<]KR5`PGQ:m5`NkFe3
+Z71 !s108 1715211432.602000
+Z72 !s107 E:/Coding/Computer-Organization/alu/MUX.v|
+Z73 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/MUX.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMUX2_1
+Z74 I1B:RL:jCW0Oa<5Z>5Lzb83
+Z75 V`2G`go3<o>]D0e1D55:Rb1
+R3
+Z76 w1715076801
+Z77 8E:/Coding/Computer-Organization/alu/MUX2_1.v
+Z78 FE:/Coding/Computer-Organization/alu/MUX2_1.v
+L0 1
+R7
+r1
+31
+R8
+Z79 n@m@u@x2_1
+Z80 !s100 R3=6YeMhiFoJ81GjYobWE2
+Z81 !s108 1715211432.651000
+Z82 !s107 E:/Coding/Computer-Organization/alu/MUX2_1.v|
+Z83 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/MUX2_1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShifter
+Z84 ISCPHT^V62L4NL3E:?AgB`3
+Z85 VfS;0ALzZEda0P:iM6J@CB0
+R3
+R76
+Z86 8E:/Coding/Computer-Organization/alu/Shifter.v
+Z87 FE:/Coding/Computer-Organization/alu/Shifter.v
+L0 2
+R7
+r1
+31
+R8
+Z88 n@shifter
+Z89 !s100 aP5<bXHA`mQ`6VHZJ=3zk0
+Z90 !s108 1715211432.694000
+Z91 !s107 E:/Coding/Computer-Organization/alu/Shifter.v|
+Z92 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/Shifter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_ALU
+Z93 Io[f[1No?X?F3l6zP8f@Nm1
+Z94 VJ;TnOjHFn3KbASFPGPEl41
+R3
+Z95 w1715069635
+Z96 8E:/Coding/Computer-Organization/alu/tb_ALU.v
+Z97 FE:/Coding/Computer-Organization/alu/tb_ALU.v
+L0 2
+R7
+r1
+31
+R8
+Z98 ntb_@a@l@u
+!i10b 1
+Z99 !s100 `ZU]SaaR``>@P6KzjEF7L3
+!s85 0
+Z100 !s108 1715211432.741000
+Z101 !s107 E:/Coding/Computer-Organization/alu/tb_ALU.v|
+Z102 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/tb_ALU.v|
+!s101 -O0
+vTotalALU
+!i10b 1
+!s100 `Ph`[c2N`aE8FM`B;d3jG2
+IKAk^eiJPJ]ojkVjEbTlQ13
+V8YPe[O^iA3711lZ=R7=GX0
+R3
+R46
+8E:/Coding/Computer-Organization/alu/TotalALU.v
+FE:/Coding/Computer-Organization/alu/TotalALU.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1715211432.781000
+!s107 E:/Coding/Computer-Organization/alu/TotalALU.v|
+!s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/alu/TotalALU.v|
+!s101 -O0
+R8
+n@total@a@l@u
