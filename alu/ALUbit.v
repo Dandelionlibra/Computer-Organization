@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module ALUbit( a, b,bitInvert,cin,less, operation, dataOut, set, cout );
+module ALUbit( a, b, bitInvert, cin, less, operation, dataOut, set, cout );
 // 1 bit ALU
 input a, b, bitInvert, cin, less ;
 input [5:0] operation ;
@@ -15,6 +15,6 @@ xor(xorOut, bitInvert, b);
 
 FullAdder U_FA( .a(a), .b(xorOut), .cin(cin), .sum(set), .cout(cout) );
 
-Mux4_1 U_Mux4_1( .out(dataOut), .in0(andOut), .in1(orOut), .in2(set), .in3(less), .sel(operation) );
+MUX4_1 U_Mux4_1( .out(dataOut), .in0(andOut), .in1(orOut), .in2(set), .in3(less), .sel(operation) );
 
 endmodule
