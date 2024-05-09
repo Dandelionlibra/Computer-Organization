@@ -18,7 +18,7 @@ parameter SLT = 6'b101010;
 
 parameter SLL = 6'b000000;
 
-parameter DIVU= 6'b011011;
+parameter MULTU= 6'b011011;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
 /*
@@ -92,7 +92,14 @@ MFHI和MFLO
 /*
 end
 */
-assign dataOut = (Signal == MFHI) ? HiOut : (Signal == MFLO) ? LoOut : temp ;
+assign dataOut = (Signal == AND || Signal == OR || Signal == ADD || Signal == SUB || Signal == SLT ) ? 
+ALUOut 
+:(Signal == MFHI) ? 
+HiOut 
+: (Signal == MFLO) ? 
+LoOut 
+: (Signal == SLL) ? 
+Shifter : 32'b0;
 /*
 =====================================================
 上面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫

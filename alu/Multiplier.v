@@ -25,12 +25,14 @@ parameter OUT = 6'b111111;
 */
 always@( posedge clk or reset )
 begin
+    
         if ( reset )
         begin
-                product = 32'b0 ;
+                product <= 64'b0 ;
                 multiply <= dataB;
-                product <= {dataA, 32'b0};
+                
         end
+        
 /*
 reset訊號 如果是reset就做歸0
 */
@@ -39,11 +41,19 @@ reset訊號 如果是reset就做歸0
 		case ( Signal )
         MULTU :
         begin
+                $display("multiply = %d", multiply);
                 if (multiply[0] == 1'b1) begin
-                        product <= product + {dataA, 32'b0};
+                    product[63:32] <= product[63:32] + dataA;
+                    $display("product1 = %d", product);
                 end
                product <= product >> 1;
+               $display("product = %d", product);
                multiply <= multiply >> 1;
+        end
+        OUT :
+        begin 
+
+
         end
 		endcase
         end

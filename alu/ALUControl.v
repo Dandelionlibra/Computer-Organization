@@ -1,10 +1,10 @@
 `timescale 1ns/1ns
-module ALUControl( clk, Signal, SignaltoALU, SignaltoSHT, SignaltoDIV, SignaltoMUX );
+module ALUControl( clk, Signal, SignaltoALU, SignaltoSHT, SignaltoMULTU, SignaltoMUX );
 input clk ;
 input [5:0] Signal ;
 output [5:0] SignaltoALU ;
 output [5:0] SignaltoSHT ;
-output [5:0] SignaltoDIV ;
+output [5:0] SignaltoMULTU ;
 output [5:0] SignaltoMUX ;
 
 //   Signal ( 6-bits)?
@@ -29,22 +29,22 @@ parameter SLT = 6'b101010;
 parameter SLL = 6'b000000;
 parameter MULTU= 6'b011001;
 /*
-©w¸q¦UºØ°T¸¹
+ï¿½wï¿½qï¿½Uï¿½Ø°Tï¿½ï¿½
 */
 
 /*
 =====================================================
-¤U­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ð¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ï¿½Uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½Ò¡Aï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½Ð¿ï¿½ï¿½Ó¦Ñ®vï¿½Wï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½Ó¼g
 =====================================================
 */
 always@( Signal )
 begin
   if ( Signal == MULTU )
   begin
-    counter = 0 ;
+    counter <= 0 ;
   end
 /*
-¦pªG°T¸¹§ïÅÜ¦¨°£(­¼)ªk ´N§âcounterÂk0
+ï¿½pï¿½Gï¿½Tï¿½ï¿½ï¿½ï¿½ï¿½Ü¦ï¿½ï¿½ï¿½(ï¿½ï¿½)ï¿½k ï¿½Nï¿½ï¿½counterï¿½k0
 */
 end
 
@@ -53,15 +53,15 @@ begin
   temp = Signal ;
   if ( Signal == MULTU )
   begin
-    counter = counter + 1 ;
+    counter <= counter + 1 ;
     if ( counter == 32 )
     begin
-      temp = 6'b111111 ; // Open HiLo reg for Div( Mul)
-      counter = 0 ;
+      temp <= 6'b111111 ; // Open HiLo reg for Div( Mul)
+      counter <= 0 ;
     end
   end
 /*
-¼Æ32­ÓclkµM«á¶}±ÒHiLo¼È¦s¾¹µ¹­¼ªk¾¹©ñ­È¶i¥h
+ï¿½ï¿½32ï¿½ï¿½clkï¿½Mï¿½ï¿½}ï¿½ï¿½HiLoï¿½È¦sï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½kï¿½ï¿½ï¿½ï¿½È¶iï¿½h
 */
 end
 
