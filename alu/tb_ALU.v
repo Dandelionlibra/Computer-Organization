@@ -6,7 +6,7 @@ module tb_ALU();
 	wire[31:0] out;
 	integer fp_r, fp_r_ans, eof;
 	
-	// ���ͮɯߡA�g���G10ns
+	// 產生時脈，週期：10ns
 	initial begin
 		clk = 1'b1;
 		forever #5 clk = ~clk;
@@ -18,21 +18,21 @@ module tb_ALU();
 		#10;
 		rst = 1'b0;
 		/*
-			Ū����J���O�A�ɦW"input.txt"�i�ۦ�ק�
-			�C�@�欰�@����J
-			�榡���G����T��  InputA  InputB
+			讀取輸入指令，檔名"input.txt"可自行修改
+			每一行為一筆輸入
+			格式為：控制訊號  InputA  InputB
 		*/
 		fp_r = $fopen( "input.txt", "r" );
 		/*
-			Ū�����סA�ɦW"ans.txt"�i�ۦ�ק�
-			�C�@�欰�@�����T����
+			讀取答案，檔名"ans.txt"可自行修改
+			每一行為一筆正確答案
 		*/
 		fp_r_ans = $fopen( "ans.txt", "r" );
 		/*
-			�ۦ��}�l����ALU�ä���X���G
-			�p���G���T�A�N��X�G"Correct"
-			�����T�N��X���浲�G�P���T����
-			�H�W��X���Ĥ@�ӼƦr��cycle number
+			自此開始模擬ALU並比對輸出結果
+			如結果正確，將輸出："Correct"
+			不正確將輸出執行結果與正確答案
+			以上輸出的第一個數字為cycle number
 		*/
 		$display( "Start\n" );
 		eof = $fscanf(fp_r_ans, "%d", ans);
@@ -51,8 +51,8 @@ module tb_ALU();
 				#330;
 				$display( "%d: Mul End\n", $time/10 );
 				/*
-					���k�����浲����A���צs��Hi-Lo�Ȧs��
-					�H�U�۰ʲ���MFHI, MFLO���O�ˬd���k�B�⵲�G
+					除法器執行結束後，答案存至Hi-Lo暫存器
+					以下自動產生MFHI, MFLO指令檢查除法運算結果
 				*/
 				#10;
 				#10;

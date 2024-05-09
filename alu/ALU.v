@@ -9,6 +9,7 @@ output [31:0] dataOut;
 input reset;
 
 wire [31:0] cout;
+wire set;
 
 //  Signal ( 6-bits)?
 //  AND  : 36
@@ -26,7 +27,7 @@ parameter SLT = 6'b101010;
 
 assign cin = (Signal == 6'd34)? 1'b1 : 1'b0;
 assign bitInvert = (Signal == 6'd34)? 1'b1 : 1'b0;
-ALUbit alu0( .a(dataA[0]), .b(dataB[0]), .bitInvert(bitInvert), .cin(cin), .less(reset), .operation(Signal), .dataOut(dataOut[0]), .set(), .cout(cout[0]) );
+ALUbit alu0( .a(dataA[0]), .b(dataB[0]), .bitInvert(bitInvert), .cin(cin), .less(set), .operation(Signal), .dataOut(dataOut[0]), .set(), .cout(cout[0]) );
 ALUbit alu1( .a(dataA[1]), .b(dataB[1]), .bitInvert(bitInvert), .cin(cout[0]), .less(1'b0), .operation(Signal), .dataOut(dataOut[1]), .set(), .cout(cout[1]) );
 ALUbit alu2( .a(dataA[2]), .b(dataB[2]), .bitInvert(bitInvert), .cin(cout[1]), .less(1'b0), .operation(Signal), .dataOut(dataOut[2]), .set(), .cout(cout[2]) );
 ALUbit alu3( .a(dataA[3]), .b(dataB[3]), .bitInvert(bitInvert), .cin(cout[2]), .less(1'b0), .operation(Signal), .dataOut(dataOut[3]), .set(), .cout(cout[3]) );
@@ -57,6 +58,6 @@ ALUbit alu27( .a(dataA[27]), .b(dataB[27]), .bitInvert(bitInvert), .cin(cout[26]
 ALUbit alu28( .a(dataA[28]), .b(dataB[28]), .bitInvert(bitInvert), .cin(cout[27]), .less(1'b0), .operation(Signal), .dataOut(dataOut[28]), .set(), .cout(cout[28]) );
 ALUbit alu29( .a(dataA[29]), .b(dataB[29]), .bitInvert(bitInvert), .cin(cout[28]), .less(1'b0), .operation(Signal), .dataOut(dataOut[29]), .set(), .cout(cout[29]) );
 ALUbit alu30( .a(dataA[30]), .b(dataB[30]), .bitInvert(bitInvert), .cin(cout[29]), .less(1'b0), .operation(Signal), .dataOut(dataOut[30]), .set(), .cout(cout[30]) );
-ALUbit alu31( .a(dataA[31]), .b(dataB[31]), .bitInvert(bitInvert), .cin(cout[30]), .less(1'b0), .operation(Signal), .dataOut(dataOut[31]), .set(reset), .cout(cout[31]) );
+ALUbit alu31( .a(dataA[31]), .b(dataB[31]), .bitInvert(bitInvert), .cin(cout[30]), .less(1'b0), .operation(Signal), .dataOut(dataOut[31]), .set(set), .cout(cout[31]) );
 
 endmodule

@@ -30,7 +30,7 @@ parameter MULTU= 6'b011001;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
 /*
-�w�q�U�ذT��
+定義各種訊號
 */
 //============================
 wire [5:0]  SignaltoALU ;
@@ -41,7 +41,7 @@ wire [31:0] ALUOut, HiOut, LoOut, ShifterOut ;
 wire [31:0] dataOut ;
 wire [63:0] DivAns ;
 /*
-�w�q�U�ر��u
+定義各種接線
 */
 //============================
 
@@ -52,7 +52,7 @@ Shifter Shifter( .dataA(dataA), .dataB(dataB), .Signal(SignaltoSHT), .dataOut(Sh
 HiLo HiLo( .clk(clk), .DivAns(DivAns), .HiOut(HiOut), .LoOut(LoOut), .reset(reset) );
 MUX MUX( .ALUOut(ALUOut), .HiOut(HiOut), .LoOut(LoOut), .Shifter(ShifterOut), .Signal(SignaltoMUX), .dataOut(dataOut) );
 /*
-�إߦU��module
+建立各種module
 */
 assign Output = dataOut ;
 

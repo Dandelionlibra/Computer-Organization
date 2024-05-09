@@ -41,7 +41,7 @@ always@( Signal )
 begin
   if ( Signal == MULTU )
   begin
-    counter <= 0 ;
+    counter = 0 ;
   end
 /*
 �p�G�T�����ܦ���(��)�k �N��counter�k0
@@ -53,11 +53,11 @@ begin
   temp = Signal ;
   if ( Signal == MULTU )
   begin
-    counter <= counter + 1 ;
+    counter = counter + 1 ;
     if ( counter == 32 )
     begin
-      temp <= 6'b111111 ; // Open HiLo reg for Div( Mul)
-      counter <= 0 ;
+      temp = 6'b111111 ; // Open HiLo reg for Div( Mul)
+      counter = 0 ;
     end
   end
 /*

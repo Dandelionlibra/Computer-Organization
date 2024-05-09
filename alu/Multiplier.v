@@ -6,68 +6,77 @@ input reset ;
 input [31:0] dataA ; // Multiplicand
 input [31:0] dataB ;
 input [5:0] Signal ;
-output [63:0] dataOut ;
+output reg [63:0] dataOut ;
 
 //   Signal ( 6-bits)?
 //   DIVU  : 27
 
 reg [63:0] product;
-reg [31:0] multiply ;
+reg [31:0] multiply, multiplicand ;
 parameter MULTU = 6'b011001;
 parameter OUT = 6'b111111;
 /*
-©w¸q¦UºØ°T¸¹
+å®šç¾©å„ç¨®è¨Šè™Ÿ
 */
 /*
 =====================================================
-¤U­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ğ¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ä¸‹é¢ç‚ºæ¨¡æ“¬ç¯„ä¾‹ï¼Œç¨‹å¼æ’°å¯«è«‹éµç…§è€å¸«ä¸Šèª²èªªæ˜çš„æ–¹æ³•ä¾†å¯«
 =====================================================
 */
+
+always@(dataA)
+begin
+    multiplicand = dataA;
+end
+
+always@(dataB)
+begin
+    multiply = dataB;
+end
 always@( posedge clk or reset )
 begin
     
         if ( reset )
         begin
-                product <= 64'b0 ;
-                multiply <= dataB;
-                
+                product <= 64'd0 ;
         end
         
 /*
-reset°T¸¹ ¦pªG¬Oreset´N°µÂk0
+resetè¨Šè™Ÿ å¦‚æœæ˜¯resetå°±åšæ­¸0
 */
+        
         else
         begin
 		case ( Signal )
         MULTU :
         begin
-                $display("multiply = %d", multiply);
+                // $display("multiply = %d, multicand = ", multiply, multiplicand);
                 if (multiply[0] == 1'b1) begin
-                    product[63:32] <= product[63:32] + dataA;
-                    $display("product1 = %d", product);
+                    product[63:32] = product[63:32] + multiplicand;
+                    //$display("product1 = %d", product);
                 end
-               product <= product >> 1;
-               $display("product = %d", product);
-               multiply <= multiply >> 1;
+               product = product >> 1;
+               // $display("product = %d", product);
+               multiply = multiply >> 1;
         end
         OUT :
         begin 
 
-
+            dataOut = product ;
         end
 		endcase
         end
 /*
-°£ªk¹Bºâ
-OUTªº³¡¤À¬O­nµ¥controlµ¹§A«ü¥O§A¤~¯à°÷§âµª®×¿é¥X¨ìHILO¼È¦s¾¹
+é™¤æ³•é‹ç®—
+OUTçš„éƒ¨åˆ†æ˜¯è¦ç­‰controlçµ¦ä½ æŒ‡ä»¤ä½ æ‰èƒ½å¤ æŠŠç­”æ¡ˆè¼¸å‡ºåˆ°HILOæš«å­˜å™¨
 */
 
 end
-assign dataOut = product ;
+
 
 /*
 =====================================================
-¤W­±¬°¼ÒÀÀ½d¨Ò¡Aµ{¦¡¼¶¼g½Ğ¿í·Ó¦Ñ®v¤W½Ò»¡©úªº¤èªk¨Ó¼g
+ä¸Šé¢ç‚ºæ¨¡æ“¬ç¯„ä¾‹ï¼Œç¨‹å¼æ’°å¯«è«‹éµç…§è€å¸«ä¸Šèª²èªªæ˜çš„æ–¹æ³•ä¾†å¯«
 =====================================================
 */
 endmodule
