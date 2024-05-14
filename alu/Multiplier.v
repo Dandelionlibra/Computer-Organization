@@ -13,11 +13,6 @@ reg [31:0] multiply, multiplicand ;
 parameter MULTU = 6'b011001;
 parameter OUT = 6'b111111;
 
-/*
-=====================================================
-下面為模擬範例，程式撰寫請遵照老師上課說明的方法來寫
-=====================================================
-*/
 
 always@(dataA)
 begin
@@ -55,8 +50,5 @@ begin
 		endcase
         end
 
-
 end
-
-
 endmodule

@@ -11,19 +11,12 @@ input reset;
 wire [31:0] cout;
 wire set;
 
-//  Signal ( 6-bits)?
-//  AND  : 36
-//  OR   : 37
-//  ADD  : 32
-//  SUB  : 34
-//  SLT  : 42
-
-
-parameter AND = 6'b100100;
-parameter OR  = 6'b100101;
-parameter ADD = 6'b100000;
-parameter SUB = 6'b100010;
-parameter SLT = 6'b101010;
+// Signal (6-bits)
+parameter AND = 6'b100100; //  AND  : 36
+parameter OR  = 6'b100101; //  OR   : 37
+parameter ADD = 6'b100000; //  ADD  : 32
+parameter SUB = 6'b100010; //  SUB  : 34
+parameter SLT = 6'b101010; //  SLT  : 42
 
 assign cin = (Signal == 6'd34 || Signal == 6'd42)? 1'b1 : 1'b0;
 assign bitInvert = (Signal == 6'd34 || Signal == 6'd42)? 1'b1 : 1'b0;

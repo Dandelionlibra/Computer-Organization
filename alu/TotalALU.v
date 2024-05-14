@@ -21,7 +21,6 @@ parameter MULTU= 6'b011001;
 parameter MFHI= 6'b010000;
 parameter MFLO= 6'b010010;
 
-
 wire [5:0]  SignaltoALU ;
 wire [5:0]  SignaltoSHT ;
 wire [5:0]  SignaltoMULTU ;
@@ -37,8 +36,6 @@ Shifter Shifter( .dataA(dataA), .dataB(dataB), .Signal(SignaltoSHT), .dataOut(Sh
 HiLo HiLo( .clk(clk), .DivAns(DivAns), .HiOut(HiOut), .LoOut(LoOut), .reset(reset) );
 MUX MUX( .ALUOut(ALUOut), .HiOut(HiOut), .LoOut(LoOut), .Shifter(ShifterOut), .Signal(SignaltoMUX), .dataOut(dataOut) );
 
-
 assign Output = dataOut ;
-
 
 endmodule

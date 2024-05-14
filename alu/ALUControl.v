@@ -7,27 +7,17 @@ output [5:0] SignaltoSHT ;
 output [5:0] SignaltoMULTU ;
 output [5:0] SignaltoMUX ;
 
-//   Signal ( 6-bits)?
-//   AND  : 36
-//   OR   : 37
-//   ADD  : 32
-//   SUB  : 34
-//   SLT  : 42
-//   SLL  : 00
-//   MULTU: 25
-
-
 reg [5:0] temp ;
 reg [6:0] counter ;
 
-
-parameter AND = 6'b100100;
-parameter OR  = 6'b100101;
-parameter ADD = 6'b100000;
-parameter SUB = 6'b100010;
-parameter SLT = 6'b101010;
-parameter SLL = 6'b000000;
-parameter MULTU= 6'b011001;
+// Signal (6-bits)
+parameter AND = 6'b100100; //   AND  : 36
+parameter OR  = 6'b100101; //   OR   : 37
+parameter ADD = 6'b100000; //   ADD  : 32
+parameter SUB = 6'b100010; //   SUB  : 34
+parameter SLT = 6'b101010; //   SLT  : 42
+parameter SLL = 6'b000000; //   SLL  : 00
+parameter MULTU= 6'b011001; //   MULTU: 25
 
 always@( Signal )
 begin
