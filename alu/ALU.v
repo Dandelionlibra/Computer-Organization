@@ -9,7 +9,7 @@ output [31:0] dataOut;
 input reset;
 
 wire [31:0] cout;
-wire set;
+wire set, bitInvert;
 
 // Signal (6-bits)
 parameter AND = 6'b100100; //  AND  : 36
