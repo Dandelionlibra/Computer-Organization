@@ -25,8 +25,8 @@ parameter ADD = 6'b100000;
 parameter SUB = 6'b100010;
 parameter SLT = 6'b101010;
 
-assign cin = (Signal == 6'd34)? 1'b1 : 1'b0;
-assign bitInvert = (Signal == 6'd34)? 1'b1 : 1'b0;
+assign cin = (Signal == 6'd34 || Signal == 6'd42)? 1'b1 : 1'b0;
+assign bitInvert = (Signal == 6'd34 || Signal == 6'd42)? 1'b1 : 1'b0;
 ALUbit alu0( .a(dataA[0]), .b(dataB[0]), .bitInvert(bitInvert), .cin(cin), .less(set), .operation(Signal), .dataOut(dataOut[0]), .set(), .cout(cout[0]) );
 ALUbit alu1( .a(dataA[1]), .b(dataB[1]), .bitInvert(bitInvert), .cin(cout[0]), .less(1'b0), .operation(Signal), .dataOut(dataOut[1]), .set(), .cout(cout[1]) );
 ALUbit alu2( .a(dataA[2]), .b(dataB[2]), .bitInvert(bitInvert), .cin(cout[1]), .less(1'b0), .operation(Signal), .dataOut(dataOut[2]), .set(), .cout(cout[2]) );

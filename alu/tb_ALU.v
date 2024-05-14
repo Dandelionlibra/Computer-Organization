@@ -50,10 +50,7 @@ module tb_ALU();
 			if ( ctrl == 32'd25 ) begin
 				#330;
 				$display( "%d: Mul End\n", $time/10 );
-				/*
-					除法器執行結束後，答案存至Hi-Lo暫存器
-					以下自動產生MFHI, MFLO指令檢查除法運算結果
-				*/
+				
 				#10;
 				#10;
 				
@@ -93,12 +90,3 @@ module tb_ALU();
 
 endmodule 
 
-/*
-	AND  : 36
-	OR   : 37
-	ADD  : 32
-	SUB  : 34
-	SLT  : 42
-	SRL  : 02
-	DIVU : 27
-*/

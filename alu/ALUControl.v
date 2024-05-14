@@ -28,24 +28,14 @@ parameter SUB = 6'b100010;
 parameter SLT = 6'b101010;
 parameter SLL = 6'b000000;
 parameter MULTU= 6'b011001;
-/*
-�w�q�U�ذT��
-*/
 
-/*
-=====================================================
-�U���������d�ҡA�{�����g�п��ӦѮv�W�һ�������k�Ӽg
-=====================================================
-*/
 always@( Signal )
 begin
   if ( Signal == MULTU )
   begin
     counter = 0 ;
   end
-/*
-�p�G�T�����ܦ���(��)�k �N��counter�k0
-*/
+
 end
 
 always@( posedge clk )
@@ -56,13 +46,11 @@ begin
     counter = counter + 1 ;
     if ( counter == 32 )
     begin
-      temp = 6'b111111 ; // Open HiLo reg for Div( Mul)
+      temp = 6'b111111 ; // Open HiLo reg for Mul
       counter = 0 ;
     end
   end
-/*
-��32��clk�M��}��HiLo�Ȧs�������k����ȶi�h
-*/
+
 end
 
 

@@ -12,7 +12,6 @@ Shifter U_Shifter( .a(a), .b(b), .signal(signal), .dataOut(dataOut), .set(set) )
 
 parameter t = 100;
 initial begin
-
     // Test case 1
     a = 32'd12;
     b = 32'd2;
