@@ -1,5 +1,8 @@
+// 設定時間尺度
 `timescale 1ns/1ns
+// 定義 module Shifter 可連接的 ports
 module Shifter( dataA, dataB, Signal, dataOut, reset );
+// 定義哪些 ports 為 input，哪些為 output
 input reset ;
 input [31:0] dataA ;
 input [31:0] dataB ;
@@ -7,9 +10,12 @@ input [5:0] Signal ;
 output [31:0] dataOut ;
 
 // orginal reg, reg only can used in always block and initial block, combinational block can't use reg
+// 宣告 Barrel Shifter 五層的輸出為 wire
 wire [31:0] temp, temp1, temp2, temp3, temp4 ;
 
+// 定義參數常數
 parameter SLL = 6'b000000;
+// 第一層，1 位元左移
 MUX2_1 mux1_0( .in0(dataA[31]), .in1(dataA[30]), .sel(dataB[0]), .out(temp[31]) );
 MUX2_1 mux1_1( .in0(dataA[30]), .in1(dataA[29]), .sel(dataB[0]), .out(temp[30]) );
 MUX2_1 mux1_2( .in0(dataA[29]), .in1(dataA[28]), .sel(dataB[0]), .out(temp[29]) );
@@ -43,6 +49,7 @@ MUX2_1 mux1_29( .in0(dataA[2]), .in1(dataA[1]), .sel(dataB[0]), .out(temp[2]) );
 MUX2_1 mux1_30( .in0(dataA[1]), .in1(dataA[0]), .sel(dataB[0]), .out(temp[1]) );
 MUX2_1 mux1_31( .in0(dataA[0]), .in1(1'b0), .sel(dataB[0]), .out(temp[0]) );
 
+// 第二層，2 位元左移
 MUX2_1 mux2_0( .in0(temp[31]), .in1(temp[29]), .sel(dataB[1]), .out(temp1[31]) );
 MUX2_1 mux2_1( .in0(temp[30]), .in1(temp[28]), .sel(dataB[1]), .out(temp1[30]) );
 MUX2_1 mux2_2( .in0(temp[29]), .in1(temp[27]), .sel(dataB[1]), .out(temp1[29]) );
@@ -76,6 +83,7 @@ MUX2_1 mux2_29( .in0(temp[2]), .in1(temp[0]), .sel(dataB[1]), .out(temp1[2]) );
 MUX2_1 mux2_30( .in0(temp[1]), .in1(1'b0), .sel(dataB[1]), .out(temp1[1]) );
 MUX2_1 mux2_31( .in0(temp[0]), .in1(1'b0), .sel(dataB[1]), .out(temp1[0]) );
 
+// 第三層，4 位元左移
 MUX2_1 mux3_0( .in0(temp1[31]), .in1(temp1[27]), .sel(dataB[2]), .out(temp2[31]) );
 MUX2_1 mux3_1( .in0(temp1[30]), .in1(temp1[26]), .sel(dataB[2]), .out(temp2[30]) );
 MUX2_1 mux3_2( .in0(temp1[29]), .in1(temp1[25]), .sel(dataB[2]), .out(temp2[29]) );
@@ -109,6 +117,7 @@ MUX2_1 mux3_29( .in0(temp1[2]), .in1(1'b0), .sel(dataB[2]), .out(temp2[2]) );
 MUX2_1 mux3_30( .in0(temp1[1]), .in1(1'b0), .sel(dataB[2]), .out(temp2[1]) );
 MUX2_1 mux3_31( .in0(temp1[0]), .in1(1'b0), .sel(dataB[2]), .out(temp2[0]) );
 
+// 第四層，8 位元左移
 MUX2_1 mux4_0( .in0(temp2[31]), .in1(temp2[23]), .sel(dataB[3]), .out(temp3[31]) );
 MUX2_1 mux4_1( .in0(temp2[30]), .in1(temp2[22]), .sel(dataB[3]), .out(temp3[30]) );
 MUX2_1 mux4_2( .in0(temp2[29]), .in1(temp2[21]), .sel(dataB[3]), .out(temp3[29]) );
@@ -142,6 +151,7 @@ MUX2_1 mux4_29( .in0(temp2[2]), .in1(1'b0), .sel(dataB[3]), .out(temp3[2]) );
 MUX2_1 mux4_30( .in0(temp2[1]), .in1(1'b0), .sel(dataB[3]), .out(temp3[1]) );
 MUX2_1 mux4_31( .in0(temp2[0]), .in1(1'b0), .sel(dataB[3]), .out(temp3[0]) );
 
+// 第五層，16 位元左移
 MUX2_1 mux5_0( .in0(temp3[31]), .in1(temp3[15]), .sel(dataB[4]), .out(temp4[31]) );
 MUX2_1 mux5_1( .in0(temp3[30]), .in1(temp3[14]), .sel(dataB[4]), .out(temp4[30]) );
 MUX2_1 mux5_2( .in0(temp3[29]), .in1(temp3[13]), .sel(dataB[4]), .out(temp4[29]) );
@@ -175,6 +185,7 @@ MUX2_1 mux5_29( .in0(temp3[2]), .in1(1'b0), .sel(dataB[4]), .out(temp4[2]) );
 MUX2_1 mux5_30( .in0(temp3[1]), .in1(1'b0), .sel(dataB[4]), .out(temp4[1]) );
 MUX2_1 mux5_31( .in0(temp3[0]), .in1(1'b0), .sel(dataB[4]), .out(temp4[0]) );
 
+// 若訊號為左移，將 dataOut 設為第五層的輸出
 assign dataOut = (Signal == SLL) ? temp4 : 32'b0 ;
 
 endmodule

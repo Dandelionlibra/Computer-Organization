@@ -1,25 +1,32 @@
+// 設定時間尺度
 `timescale 1ns/1ns
-
+// 定義 module ALU 可連接的 ports
 module ALU(dataA, dataB, Signal, dataOut, reset);
 
+// 定義哪些 ports 為 input，哪些為 output
 input [31:0] dataA;
 input [31:0] dataB;
 input [5:0] Signal;
 output [31:0] dataOut;
 input reset;
 
+// 宣告兩 wire，cout 為 32 位元，set 為一位元
 wire [31:0] cout;
 wire set, bitInvert;
 
 // Signal (6-bits)
+// 定義各種參數常數(可提高可讀性)
 parameter AND = 6'b100100; //  AND  : 36
 parameter OR  = 6'b100101; //  OR   : 37
 parameter ADD = 6'b100000; //  ADD  : 32
 parameter SUB = 6'b100010; //  SUB  : 34
 parameter SLT = 6'b101010; //  SLT  : 42
 
+// 若訊號為減法或小於，則 cin[0] 應傳入 1、bitInvert 打開來將減數進行 bitInvert，進行減法運算
 assign cin = (Signal == 6'd34 || Signal == 6'd42)? 1'b1 : 1'b0;
 assign bitInvert = (Signal == 6'd34 || Signal == 6'd42)? 1'b1 : 1'b0;
+
+// 因為是 32-bit 運算，將 32 個 ALU 單元串起來
 ALUbit alu0( .a(dataA[0]), .b(dataB[0]), .bitInvert(bitInvert), .cin(cin), .less(set), .operation(Signal), .dataOut(dataOut[0]), .set(), .cout(cout[0]) );
 ALUbit alu1( .a(dataA[1]), .b(dataB[1]), .bitInvert(bitInvert), .cin(cout[0]), .less(1'b0), .operation(Signal), .dataOut(dataOut[1]), .set(), .cout(cout[1]) );
 ALUbit alu2( .a(dataA[2]), .b(dataB[2]), .bitInvert(bitInvert), .cin(cout[1]), .less(1'b0), .operation(Signal), .dataOut(dataOut[2]), .set(), .cout(cout[2]) );
