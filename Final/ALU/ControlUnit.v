@@ -18,29 +18,20 @@
 // 設定時間尺度
 `timescale 1ns/1ns
 // 定義 module ControlUnit 可連接的 ports
-module ControlUnit( clk, OpCode, EX, MEM, WB, Jump);
+module ControlUnit( clk, OpCode, Funct, EX, MEM, WB, Jump, JR);
 // 定義哪些 ports 為 input，哪些為 output
 input clk;
 input [5:0] OpCode;
+input [5:0] Funct;
 output reg [3:0] EX;
 output reg [2:0] MEM;
 output reg [1:0] WB;
-output reg Jump;
+output reg Jump, JR;
 
 reg RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch;
 reg [1:0] ALUOp;
 
 // 定義參數常數(可提升可讀性)
-// Signal (6-bits)
-
-parameter AND = 6'b100100; //   AND  : 36
-parameter OR  = 6'b100101; //   OR   : 37
-parameter ADD = 6'b100000; //   ADD  : 32
-parameter SUB = 6'b100010; //   SUB  : 34
-parameter SLT = 6'b101010; //   SLT  : 42
-parameter SLL = 6'b000000; //   SLL  : 00
-parameter MULTU= 6'b011001; //   MULTU: 25
-
 
 // final signal
 parameter R_TYPE = 6'b000000; //   R_TYPE  : 00
@@ -50,10 +41,7 @@ parameter LW  = 6'b100011; //   lw   : 35
 parameter SW  = 6'b101011; //   sw   : 43
 parameter BEQ = 6'b000100; //   beq  : 04
 parameter J   = 6'b000010; //   j    : 02
-parameter JR  = 6'b001000; //   jr   : 08
-// parameter MULTU= 6'b011001; //   MULTU: 25
-parameter MFHI = 6'b010000; //   mfhi : 16
-parameter MFLO = 6'b010010; //   mflo : 12
+parameter Funct_JR  = 6'b001000; //   jr   : 08
 
 
 always@( OpCode )
@@ -70,6 +58,7 @@ begin
       RegWrite = 1'b1 ;
       MemtoReg = 1'b1 ;
       Jump = 1'b0 ;
+      JR = 1'b0 ;
     end
     else if ( OpCode == SW ) // 若當前訊號為儲存
     begin
@@ -82,6 +71,7 @@ begin
       RegWrite = 1'b0 ;
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b0 ;
+      JR = 1'b0 ;
     end
 
     else if ( OpCode == BEQ ) // 若當前訊號為條件跳躍
@@ -95,6 +85,7 @@ begin
       RegWrite = 1'b0 ;
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b0 ;
+      JR = 1'b0 ;
     end
 
     else if ( OpCode == J ) // 若當前訊號為跳躍
@@ -108,21 +99,7 @@ begin
       RegWrite = 1'b0 ;
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b1 ;
-
-    end
-
-    else if ( OpCode == JR ) // Unconditionally jump to the instruction whose address is in register rs
-    begin
-      ALUOp = 2'b00 ; // 00 -> add
-      RegDst = 1'bx ; // don't care
-      ALUSrc = 1'b0 ;
-      Branch = 1'b1 ;
-      MemRead = 1'b0 ;
-      MemWrite = 1'b0 ;
-      RegWrite = 1'b0 ;
-      MemtoReg = 1'bx ; // don't care
-      Jump = 1'b1 ;
-
+      JR = 1'b0 ;
     end
 
     else if ( OpCode == ANDI ) // 若當前訊號為讀取 andi rt, rs, immediate
@@ -136,25 +113,40 @@ begin
       RegWrite = 1'b1 ;
       MemtoReg = 1'b0 ;
       Jump = 1'b0 ;
-
+      JR = 1'b0 ;
     end
 
     // R-type instructions
     else if ( OpCode == R_TYPE ) // 若當前訊號為 R-type
     begin
-      ALUOp = 2'b10 ;
-      RegDst = 1'b1 ;
-      ALUSrc = 1'b0 ;
-      Branch = 1'b0 ;
-      MemRead = 1'b0 ;
-      MemWrite = 1'b0 ;
-      RegWrite = 1'b1 ;
-      MemtoReg = 1'b0 ;
-      Jump = 1'b0 ;
+        if ( Funct == Funct_JR ) begin 
+            ALUOp = 2'b01 ;
+            RegDst = 1'bx ;
+            ALUSrc = 1'b0 ;
+            Branch = 1'b1 ;
+            MemRead = 1'b0 ;
+            MemWrite = 1'b0 ;
+            RegWrite = 1'b0 ;
+            MemtoReg = 1'bx ;
+            Jump = 1'b1 ;
+            JR = 1'b1 ;
+        end
+        else begin
+            ALUOp = 2'b10 ;
+            RegDst = 1'b1 ;
+            ALUSrc = 1'b0 ;
+            Branch = 1'b0 ;
+            MemRead = 1'b0 ;
+            MemWrite = 1'b0 ;
+            RegWrite = 1'b1 ;
+            MemtoReg = 1'b0 ;
+            Jump = 1'b0 ;
+            JR = 1'b0 ;
+        end
     end
     else
     begin
-        $display("control_single unimplemented opcode %d", OpCode);
+      $display("control_single unimplemented opcode %d", OpCode);
       ALUOp = 2'bxx ;
       RegDst = 1'bx ; // don't care
       ALUSrc = 1'bx ;
@@ -164,6 +156,7 @@ begin
       RegWrite = 1'bx ;
       MemtoReg = 1'bx ; // don't care
       Jump = 1'bx ;
+      JR = 1'bx ;
     end
 
     // EX
