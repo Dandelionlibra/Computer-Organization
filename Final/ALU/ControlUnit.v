@@ -6,8 +6,15 @@ module ControlUnit( clk, Signal, ALUOp, RegDst, ALUSrc, Branch, MemRead, MemWrit
 input clk;
 input [5:0] Signal;
 output [1:0] ALUOp;
+
 output RegDst;
 output ALUSrc;
+output Branch;
+output MemRead;
+output MemWrite;
+output RegWrite;
+output MemtoReg;
+output Jump;
 
 // 定義參數常數(可提升可讀性)
 // Signal (6-bits)
