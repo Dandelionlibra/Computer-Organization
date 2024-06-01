@@ -20,6 +20,6 @@ xor(xorOut, bitInvert, b);
 // 把 a 與處理過的 b 給加法器運算
 FullAdder U_FA( .a(a), .b(xorOut), .cin(cin), .sum(set), .cout(cout) );
 // 多工器以 operation 判斷要哪個運算的結果
-MUX4_1 U_Mux4_1( .out(dataOut), .in0(andOut), .in1(orOut), .in2(set), .in3(less), .sel(operation) );
+ALU_MUX4_1 U_Mux4_1( .out(dataOut), .in0(andOut), .in1(orOut), .in2(set), .in3(less), .sel(operation) );
 
 endmodule
