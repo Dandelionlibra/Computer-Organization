@@ -1,12 +1,10 @@
 // 設定時間尺度
 `timescale 1ns/1ns
 // 定義 module Shifter 可連接的 ports
-module Shifter( dataA, dataB, Signal, dataOut, reset );
+module Shifter( dataA, dataB, dataOut );
 // 定義哪些 ports 為 input，哪些為 output
-input reset ;
 input [31:0] dataA ;
 input [31:0] dataB ;
-input [5:0] Signal ;
 output [31:0] dataOut ;
 
 // orginal reg, reg only can used in always block and initial block, combinational block can't use reg
@@ -186,6 +184,6 @@ MUX2_1 mux5_30( .in0(temp3[1]), .in1(1'b0), .sel(dataB[4]), .out(temp4[1]) );
 MUX2_1 mux5_31( .in0(temp3[0]), .in1(1'b0), .sel(dataB[4]), .out(temp4[0]) );
 
 // 若訊號為左移，將 dataOut 設為第五層的輸出
-assign dataOut = (Signal == SLL) ? temp4 : 32'b0 ;
+assign dataOut = temp4 ;
 
 endmodule

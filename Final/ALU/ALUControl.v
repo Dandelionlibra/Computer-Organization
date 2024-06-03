@@ -17,24 +17,25 @@ input [1:0] ALUOp ;
 input [5:0] Funct ;
 
 output reg [2:0] ALUOperation ;
-output reg SignaltoMULTU ;
+output reg [5:0] SignaltoMULTU ;
 output reg [1:0] SelHilo ;
 
 // 宣告 7 位元的暫存器
 reg [6:0] counter ;
 
 // 定義參數常數(可提升可讀性)
-// Signal (6-bits), Check 4-1 P.61
+// Check 4-1 P.61
 parameter ALU_AND = 3'b000;
 parameter ALU_OR  = 3'b001; 
 parameter ALU_ADD = 3'b010;
 parameter ALU_SUB = 3'b110; 
 parameter ALU_SLT = 3'b111; 
-// parameter ALU_SLL = 6'b000000;
+parameter ALU_SLL = 3'b100;
 parameter ALU_OpenHiLo = 6'b111111; // HiLo : 63
 
 
 // Funct
+parameter Funct_SLL = 6'b000000; //   SLL  : 0
 parameter Funct_ADD = 6'b100000; //   ADD  : 32
 parameter Funct_SUB = 6'b100010; //   SUB  : 34
 parameter Funct_AND = 6'b100100; //   AND  : 36
@@ -85,6 +86,7 @@ begin
                 Funct_AND: ALUOperation = ALU_AND;
                 Funct_OR: ALUOperation = ALU_OR;
                 Funct_SLT: ALUOperation = ALU_SLT;
+                Funct_SLL: ALUOperation = ALU_SLL;
                 Funct_MFHI: SelHilo = 2'b01;
                 Funct_MFLO: SelHilo = 2'b10;
                 default: ALUOperation = 3'bxxx;
