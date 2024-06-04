@@ -18,7 +18,7 @@
 // 設定時間尺度
 `timescale 1ns/1ns
 // 定義 module ControlUnit 可連接的 ports
-module ControlUnit( clk, OpCode, Funct, EX, MEM, WB, Jump, JR);
+module ControlUnit( clk, OpCode, Funct, EX, MEM, WB, ExtendSel, Jump, JR);
 // 定義哪些 ports 為 input，哪些為 output
 input clk;
 input [5:0] OpCode;
@@ -27,6 +27,7 @@ output reg [3:0] EX;
 output reg [2:0] MEM;
 output reg [1:0] WB;
 output reg Jump, JR;
+output reg ExtendSel;
 
 reg RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch;
 reg [1:0] ALUOp;
@@ -59,6 +60,7 @@ begin
       MemtoReg = 1'b1 ;
       Jump = 1'b0 ;
       JR = 1'b0 ;
+      ExtendSel = 1'b1 ; // sign extend
     end
     else if ( OpCode == SW ) // 若當前訊號為儲存
     begin
@@ -72,6 +74,7 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b0 ;
       JR = 1'b0 ;
+      ExtendSel = 1'b1 ;
     end
 
     else if ( OpCode == BEQ ) // 若當前訊號為條件跳躍
@@ -86,6 +89,7 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b0 ;
       JR = 1'b0 ;
+        ExtendSel = 1'b1 ;
     end
 
     else if ( OpCode == J ) // 若當前訊號為跳躍
@@ -100,6 +104,7 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b1 ;
       JR = 1'b0 ;
+        ExtendSel = 1'b1 ;
     end
 
     else if ( OpCode == ANDI ) // 若當前訊號為讀取 andi rt, rs, immediate
@@ -114,6 +119,7 @@ begin
       MemtoReg = 1'b0 ;
       Jump = 1'b0 ;
       JR = 1'b0 ;
+        ExtendSel = 1'b1 ;
     end
 
     // R-type instructions
@@ -130,6 +136,7 @@ begin
             MemtoReg = 1'bx ;
             Jump = 1'b1 ;
             JR = 1'b1 ;
+            ExtendSel = 1'b0 ;
         end
         else begin
             ALUOp = 2'b10 ;
@@ -142,6 +149,7 @@ begin
             MemtoReg = 1'b0 ;
             Jump = 1'b0 ;
             JR = 1'b0 ;
+            ExtendSel = 1'b0 ;
         end
     end
     else
@@ -157,13 +165,14 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'bx ;
       JR = 1'bx ;
+        ExtendSel = 1'bx ;
     end
 
     // EX
     EX = {RegDst, ALUOp, ALUSrc};
 
     // MEM
-    MEM = {MemRead, MemWrite, MemtoReg};
+    MEM = {MemRead, MemWrite, Branch};
 
     // WB
     WB = {RegWrite, MemtoReg};

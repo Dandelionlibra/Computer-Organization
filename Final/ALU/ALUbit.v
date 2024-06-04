@@ -5,7 +5,7 @@ module ALUbit( a, b, bitInvert, cin, less, operation, dataOut, set, cout );
 // 1 bit ALU
 // 定義哪些 ports 為 input，哪些為 output
 input a, b, bitInvert, cin, less ;
-input [5:0] operation ;
+input [2:0] operation ;
 output dataOut, set, cout;
 
 // 定義 wire 以連接每個 module

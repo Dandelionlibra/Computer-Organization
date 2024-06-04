@@ -4,7 +4,7 @@
 module Shifter( dataA, dataB, dataOut );
 // 定義哪些 ports 為 input，哪些為 output
 input [31:0] dataA ;
-input [31:0] dataB ;
+input [4:0] dataB ;
 output [31:0] dataOut ;
 
 // orginal reg, reg only can used in always block and initial block, combinational block can't use reg

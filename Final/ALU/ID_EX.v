@@ -5,7 +5,8 @@ module ID_EX( clk, reset, RT_ID, RT_EX,
 RD_ID, RD_EX, RD1_ID, RD1_EX, 
 RD2_ID, RD2_EX, imm_ID, imm_EX, 
 WB_ID, WB_EX, EX_ID, EX_EX, 
-MEM_ID, MEM_EX, func_ID, func_EX);
+MEM_ID, MEM_EX, func_ID, func_EX,
+shamt_ID, shamt_EX);
               
 // 定義哪些 ports 為 input，哪些為 output
 input clk, reset;
@@ -17,6 +18,8 @@ input [3:0] EX_ID; // {RegDst, ALUOp, ALUSrc};
 input [4:0] RD_ID, RT_ID;
 input [5:0] func_ID;
 input [31:0] RD1_ID, RD2_ID, imm_ID;
+input [4:0] shamt_ID;
+
 
 
 //-----------------------------------------
@@ -28,6 +31,8 @@ output reg [3:0] EX_EX;
 output reg [4:0] RD_EX, RT_EX;
 output reg [5:0] func_EX;
 output reg [31:0] RD1_EX, RD2_EX, imm_EX;
+output reg [4:0] shamt_EX;
+
 
 
 always@(posedge clk)
@@ -43,7 +48,7 @@ begin
         EX_EX <= 4'b0;
         MEM_EX <= 2'b00;
         WB_EX <= 2'b00;
-       
+        shamt_EX <= 5'b0;
     end
     else
     begin
@@ -56,7 +61,7 @@ begin
         EX_EX <= EX_ID;
         MEM_EX <= MEM_ID;
         WB_EX <= WB_ID;
-        
+        shamt_EX <= shamt_ID;
     end
 end
 

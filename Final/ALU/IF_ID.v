@@ -1,7 +1,7 @@
 // 設定時間尺度
 `timescale 1ns/1ns
 // 定義 module IF_ID 可連接的 ports
-module IF_ID( clk, reset, nextPC_IF, RD_IF, nextPC_ID, RD_ID);
+module IF_ID( clk, reset, nextPC_IF, RD_IF, nextPC_ID, RD_ID );
 // 定義哪些 ports 為 input，哪些為 output
 input clk, reset;
 input [31:0] nextPC_IF;
