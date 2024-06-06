@@ -56,6 +56,8 @@ begin
 		begin 
 			// 當 32 次做完後，把結果給 dataOut
 			dataOut = product ;
+            // product = 64'd0 ;
+            
 		end
 		endcase
     end

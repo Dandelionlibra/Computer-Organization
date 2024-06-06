@@ -18,7 +18,7 @@
 // 設定時間尺度
 `timescale 1ns/1ns
 // 定義 module ControlUnit 可連接的 ports
-module ControlUnit( clk, OpCode, Funct, EX, MEM, WB, ExtendSel, Jump, JR);
+module ControlUnit( clk, OpCode, Funct, EX, MEM, WB, ExtendSel, Jump, JR, rst);
 // 定義哪些 ports 為 input，哪些為 output
 input clk;
 input [5:0] OpCode;
@@ -26,7 +26,7 @@ input [5:0] Funct;
 output reg [3:0] EX;
 output reg [2:0] MEM;
 output reg [1:0] WB;
-output reg Jump, JR;
+output reg Jump, JR,rst;
 output reg ExtendSel;
 
 reg RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch;
@@ -60,6 +60,7 @@ begin
 		Jump = 1'b0 ;
 		JR = 1'b0 ;
 		ExtendSel = 1'b1 ; // judge sign extend or unsigned
+    rst = 1'b0;
     end
     else if ( OpCode == SW ) // 若當前訊號為儲存
     begin
@@ -74,6 +75,7 @@ begin
 		Jump = 1'b0 ;
 		JR = 1'b0 ;
 		ExtendSel = 1'b1 ;
+    rst = 0;
     end
 
     else if ( OpCode == BEQ ) // 若當前訊號為條件跳躍
@@ -89,6 +91,7 @@ begin
       Jump = 1'b0 ;
       JR = 1'b0 ;
       ExtendSel = 1'b1 ;
+      rst = 0;
     end
 
     else if ( OpCode == J ) // 若當前訊號為跳躍
@@ -104,6 +107,7 @@ begin
       Jump = 1'b1 ;
       JR = 1'b0 ;
       ExtendSel = 1'b1 ;
+      rst = 0;
     end
 
     else if ( OpCode == ANDI ) // 若當前訊號為讀取 andi rt, rs, immediate
@@ -119,6 +123,7 @@ begin
       Jump = 1'b0 ;
       JR = 1'b0 ;
       ExtendSel = 1'b1 ;
+      rst = 0;
     end
 
     // R-type instructions
@@ -137,9 +142,14 @@ begin
         Jump = 1'b1 ;
         JR = 1'b1 ;
         ExtendSel = 1'b0 ;
+        rst = 0;
         end
       else
 		begin
+            if( Funct == Funct_MULTU)
+              rst = 1;
+            else
+              rst = 0;
             ALUOp = 2'b10 ;
             RegDst = 1'b1 ;
             ALUSrc = 1'b0 ;
@@ -167,6 +177,7 @@ begin
       Jump = 1'bx ;
       JR = 1'bx ;
       ExtendSel = 1'bx ;
+      rst = 1'bx;
     end
 
     // EX

@@ -62,6 +62,7 @@ begin
 	if ( Funct == Funct_MULTU )
 	begin
 		// 若當前訊號為乘法運算，將 counter + 1
+    
         SignaltoMULTU = Funct_MULTU ; // MULTU
 		counter = counter + 1 ;
 		if ( counter == 32 )
@@ -69,6 +70,7 @@ begin
 			// 若 counter 為 32，將 temp 設為 0b111111 以開啟 HiLo 的輸出
 			SignaltoMULTU = ALU_OpenHiLo ; // Open HiLo reg for Mul
 			counter = 0 ; // 將 counter 重置為 0
+            
 		end
 	end
 end

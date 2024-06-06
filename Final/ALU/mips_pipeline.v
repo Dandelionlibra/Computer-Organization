@@ -81,8 +81,9 @@ module mips_pipeline( clk, rst );
 	memory InstrMem( .clk(clk), .MemRead(1'b1), .MemWrite(1'b0), .wd(32'd0), .addr(pc), .rd(instr) );
 
     IF_ID IFID( .clk(clk), .reset(rst), .nextPC_IF(pc_incr), .RD_IF(instr), .nextPC_ID(pc_id), .RD_ID(instr_id) );
+    
     // ID stage
-
+    HazardUnit( .clk(clk), .RS(), .RT_ID(), .RT_EX(), .MemRead(), .stall());
     ControlUnit CTL(.clk(clk), .OpCode(opcode), .Funct(funct), .EX(EX_ID), 
     .MEM(MEM_ID), .WB(WB_ID), .ExtendSel(SignExtendSel), .Jump(Jump), .JR(JumpRegister));
 
