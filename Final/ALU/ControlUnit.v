@@ -1,5 +1,5 @@
 /*
-	Title: MIPS Single-Cycle Control Unit
+	Title: MIPS pipeline Control Unit
 	Editor: Selene (Computer System and Architecture Lab, ICE, CYCU)
 	
 	Input Port
@@ -47,34 +47,33 @@ parameter Funct_JR  = 6'b001000; //   jr   : 08
 
 always@( OpCode )
 begin
-
     if ( OpCode == LW ) // 若當前訊號為讀取
     begin
-      ALUOp = 2'b00 ; // 00 -> add
-      RegDst = 1'b0 ;
-      ALUSrc = 1'b1 ;
-      Branch = 1'b0 ;
-      MemRead = 1'b1 ;
-      MemWrite = 1'b0 ;
-      RegWrite = 1'b1 ;
-      MemtoReg = 1'b1 ;
-      Jump = 1'b0 ;
-      JR = 1'b0 ;
-      ExtendSel = 1'b1 ; // sign extend
+		ALUOp = 2'b00 ; // 00 -> add
+		RegDst = 1'b0 ;
+		ALUSrc = 1'b1 ;
+		Branch = 1'b0 ;
+		MemRead = 1'b1 ;
+		MemWrite = 1'b0 ;
+		RegWrite = 1'b1 ;
+		MemtoReg = 1'b1 ;
+		Jump = 1'b0 ;
+		JR = 1'b0 ;
+		ExtendSel = 1'b1 ; // judge sign extend or unsigned
     end
     else if ( OpCode == SW ) // 若當前訊號為儲存
     begin
-      ALUOp = 2'b00 ; // 00 -> add
-      RegDst = 1'bx ; // don't care
-      ALUSrc = 1'b1 ;
-      Branch = 1'b0 ;
-      MemRead = 1'b0 ;
-      MemWrite = 1'b1 ;
-      RegWrite = 1'b0 ;
-      MemtoReg = 1'bx ; // don't care
-      Jump = 1'b0 ;
-      JR = 1'b0 ;
-      ExtendSel = 1'b1 ;
+		ALUOp = 2'b00 ; // 00 -> add
+		RegDst = 1'bx ; // don't care
+		ALUSrc = 1'b1 ;
+		Branch = 1'b0 ;
+		MemRead = 1'b0 ;
+		MemWrite = 1'b1 ;
+		RegWrite = 1'b0 ;
+		MemtoReg = 1'bx ; // don't care
+		Jump = 1'b0 ;
+		JR = 1'b0 ;
+		ExtendSel = 1'b1 ;
     end
 
     else if ( OpCode == BEQ ) // 若當前訊號為條件跳躍
@@ -89,7 +88,7 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b0 ;
       JR = 1'b0 ;
-        ExtendSel = 1'b1 ;
+      ExtendSel = 1'b1 ;
     end
 
     else if ( OpCode == J ) // 若當前訊號為跳躍
@@ -104,13 +103,13 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'b1 ;
       JR = 1'b0 ;
-        ExtendSel = 1'b1 ;
+      ExtendSel = 1'b1 ;
     end
 
     else if ( OpCode == ANDI ) // 若當前訊號為讀取 andi rt, rs, immediate
     begin
       ALUOp = 2'b00 ;
-      RegDst = 1'b0 ; // don't care
+      RegDst = 1'b0 ;
       ALUSrc = 1'b1 ;
       Branch = 1'b0 ;
       MemRead = 1'b0 ;
@@ -119,26 +118,28 @@ begin
       MemtoReg = 1'b0 ;
       Jump = 1'b0 ;
       JR = 1'b0 ;
-        ExtendSel = 1'b1 ;
+      ExtendSel = 1'b1 ;
     end
 
     // R-type instructions
     else if ( OpCode == R_TYPE ) // 若當前訊號為 R-type
     begin
-        if ( Funct == Funct_JR ) begin 
-            ALUOp = 2'b01 ;
-            RegDst = 1'bx ;
-            ALUSrc = 1'b0 ;
-            Branch = 1'b1 ;
-            MemRead = 1'b0 ;
-            MemWrite = 1'b0 ;
-            RegWrite = 1'b0 ;
-            MemtoReg = 1'bx ;
-            Jump = 1'b1 ;
-            JR = 1'b1 ;
-            ExtendSel = 1'b0 ;
+      if ( Funct == Funct_JR )
+		begin 
+        ALUOp = 2'b01 ;
+        RegDst = 1'bx ;
+        ALUSrc = 1'b0 ;
+        Branch = 1'b1 ;
+        MemRead = 1'b0 ;
+        MemWrite = 1'b0 ;
+        RegWrite = 1'b0 ;
+        MemtoReg = 1'bx ;
+        Jump = 1'b1 ;
+        JR = 1'b1 ;
+        ExtendSel = 1'b0 ;
         end
-        else begin
+      else
+		begin
             ALUOp = 2'b10 ;
             RegDst = 1'b1 ;
             ALUSrc = 1'b0 ;
@@ -154,7 +155,7 @@ begin
     end
     else
     begin
-      $display("control_single unimplemented opcode %d", OpCode);
+      $display("control_single unimplemented opcode %d", OpCode); // 老師的輸出
       ALUOp = 2'bxx ;
       RegDst = 1'bx ; // don't care
       ALUSrc = 1'bx ;
@@ -165,7 +166,7 @@ begin
       MemtoReg = 1'bx ; // don't care
       Jump = 1'bx ;
       JR = 1'bx ;
-        ExtendSel = 1'bx ;
+      ExtendSel = 1'bx ;
     end
 
     // EX
@@ -178,8 +179,5 @@ begin
     WB = {RegWrite, MemtoReg};
 
 end
-
-
-
 
 endmodule

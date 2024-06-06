@@ -1,8 +1,8 @@
 /*
-	Title: MIPS Single Cycle CPU Testbench
+	Title: MIPS Pipeline CPU Testbench
 	Author: Selene (Computer System and Architecture Lab, ICE, CYCU) 
 */
-module tb_SingleCycle();
+module tb_Pipeline();
 	reg clk, rst;
     reg [31:0] cnt;
 	
@@ -36,11 +36,21 @@ module tb_SingleCycle();
 			else if ( CPU.funct == 6'd34 ) $display( "%d, SUB\n", $time/10-1 );
 			else if ( CPU.funct == 6'd36 ) $display( "%d, AND\n", $time/10-1 );
 			else if ( CPU.funct == 6'd37 ) $display( "%d, OR\n", $time/10-1 );
+			
+			else if ( CPU.opcode == 6'd0 && CPU.rs == 0 && CPU.rt == 0 && CPU.rd == 0 ) $display( "%d, Nop\n", $time/10-1 );
+			else if ( CPU.opcode == 6'd0 ) $display( "%d, sll\n", $time/10-1 );
+			else if ( CPU.opcode == 6'd25 ) $display( "%d, Mulit\n", $time/10-1 );
+			else if ( CPU.opcode == 6'd10 ) $display( "%d, Hi\n", $time/10-1 );
+			else if ( CPU.opcode == 6'd12 ) $display( "%d, Lo\n", $time/10-1 );
 		end
 		else if ( CPU.opcode == 6'd35 ) $display( "%d, LW\n", $time/10-1 );
 		else if ( CPU.opcode == 6'd43 ) $display( "%d, SW\n", $time/10-1 );
 		else if ( CPU.opcode == 6'd4 ) $display( "%d, BEQ\n", $time/10-1 );
 		else if ( CPU.opcode == 6'd2 ) $display( "%d, J\n", $time/10-1 );
+		
+		else if ( CPU.opcode == 6'd8 ) $display( "%d, Jr\n", $time/10-1 );
+		else if ( CPU.opcode == 6'd12 ) $display( "%d, Andi\n", $time/10-1 );
+
 	end
 
 

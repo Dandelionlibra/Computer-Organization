@@ -14,26 +14,21 @@ input clk, reset;
 
 input [2:0] MEM_ID; // MEM = {MemRead, MemWrite, MemtoReg};
 input [1:0] WB_ID; // WB = {RegWrite, MemtoReg};
-input [3:0] EX_ID; // {RegDst, ALUOp, ALUSrc};
+input [3:0] EX_ID; // {RegDst, [1:0]ALUOp, ALUSrc};
 input [4:0] RD_ID, RT_ID;
 input [5:0] func_ID;
 input [31:0] RD1_ID, RD2_ID, imm_ID;
 input [4:0] shamt_ID;
 
-
-
 //-----------------------------------------
 // output [31:0] nextPC_EX;
-
-output reg [2:0] MEM_EX; // MemRead、MemWrite
-output reg [1:0] WB_EX; // MemtoReg、RegWrite
-output reg [3:0] EX_EX;
+output reg [2:0] MEM_EX; // MEM = {MemRead, MemWrite, MemtoReg};
+output reg [1:0] WB_EX; // WB = {RegWrite, MemtoReg};
+output reg [3:0] EX_EX; // {RegDst, [1:0]ALUOp, ALUSrc};
 output reg [4:0] RD_EX, RT_EX;
 output reg [5:0] func_EX;
 output reg [31:0] RD1_EX, RD2_EX, imm_EX;
 output reg [4:0] shamt_EX;
-
-
 
 always@(posedge clk)
 begin
