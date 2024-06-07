@@ -43,6 +43,7 @@ parameter SW  = 6'b101011; //   sw   : 43
 parameter BEQ = 6'b000100; //   beq  : 04
 parameter J   = 6'b000010; //   j    : 02
 parameter Funct_JR  = 6'b001000; //   jr   : 08
+parameter Funct_MULTU = 6'b011001; //   MULTU: 25
 
 
 always@( OpCode )
