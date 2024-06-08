@@ -21,8 +21,7 @@ entity ControlUnit is
         WB              : out    vl_logic_vector(1 downto 0);
         ExtendSel       : out    vl_logic;
         Jump            : out    vl_logic;
-        JR              : out    vl_logic;
-        rst             : out    vl_logic
+        JR              : out    vl_logic
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of R_TYPE : constant is 1;

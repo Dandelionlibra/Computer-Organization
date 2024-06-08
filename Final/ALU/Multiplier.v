@@ -29,6 +29,11 @@ begin
     multiply = dataB;
 end
 
+always@(Signal)
+begin
+    product = 64'd0;
+end
+
 // 定義電路以 clk 或 reset 正緣觸發
 always@( posedge clk or reset )
 begin

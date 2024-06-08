@@ -1,0 +1,215 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Coding\Computer-Organization\Final\mips_single
+vadd32
+Z1 IPnnGLcJJW;`dom7dLWUn12
+Z2 VU=ZXz5UM7[GT`X^NWc0cQ1
+Z3 dE:\Coding\Computer-Organization\Final\mips_single
+Z4 w1717259409
+Z5 8E:/Coding/Computer-Organization/Final/mips_single/add32.v
+Z6 FE:/Coding/Computer-Organization/Final/mips_single/add32.v
+L0 5
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 !s100 b5Hb9CI5@LP6fKOb721]80
+Z10 !s108 1717846421.466000
+Z11 !s107 E:/Coding/Computer-Organization/Final/mips_single/add32.v|
+Z12 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/add32.v|
+!i10b 1
+!s85 0
+!s101 -O0
+valu
+Z13 IFN>[HIXoMoA=;h9l<7bMN0
+Z14 VX]R`eo]THgINTSYH40Um23
+R3
+R4
+Z15 8E:/Coding/Computer-Organization/Final/mips_single/alu.v
+Z16 FE:/Coding/Computer-Organization/Final/mips_single/alu.v
+L0 14
+R7
+r1
+31
+R8
+Z17 !s100 a5aVlN@:Nc<<[A`fQQ^Lh2
+Z18 !s108 1717846421.525000
+Z19 !s107 E:/Coding/Computer-Organization/Final/mips_single/alu.v|
+Z20 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/alu.v|
+!i10b 1
+!s85 0
+!s101 -O0
+valu_ctl
+Z21 I06nmR`?FnZO95X<JobA:f1
+Z22 ViRA3VbGBdeL1Nn@XmUFaS1
+R3
+R4
+Z23 8E:/Coding/Computer-Organization/Final/mips_single/alu_ctl.v
+Z24 FE:/Coding/Computer-Organization/Final/mips_single/alu_ctl.v
+L0 11
+R7
+r1
+31
+R8
+Z25 !s100 Aj8fN:moJQT;MQU4V8Vi:2
+Z26 !s108 1717846421.571000
+Z27 !s107 E:/Coding/Computer-Organization/Final/mips_single/alu_ctl.v|
+Z28 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/alu_ctl.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrol_single
+Z29 IWl;`5SJnF^Ed_OnR9KF:X1
+Z30 Vc<9lbRHhYi_7D`:ibXMn^3
+R3
+R4
+Z31 8E:/Coding/Computer-Organization/Final/mips_single/control_single.v
+Z32 FE:/Coding/Computer-Organization/Final/mips_single/control_single.v
+L0 17
+R7
+r1
+31
+R8
+Z33 !s100 ;N1<aU[15FLJ<V?JH24z`1
+Z34 !s108 1717846421.623000
+Z35 !s107 E:/Coding/Computer-Organization/Final/mips_single/control_single.v|
+Z36 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/control_single.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmemory
+Z37 IfV@h;Tc>;TT011UhaSi1E3
+Z38 VSPBB>2d4PV07m82El[]@^0
+R3
+R4
+Z39 8E:/Coding/Computer-Organization/Final/mips_single/memory.v
+Z40 FE:/Coding/Computer-Organization/Final/mips_single/memory.v
+L0 14
+R7
+r1
+31
+R8
+Z41 !s100 X4@4iAgJEWWYg:9KfFR;d0
+Z42 !s108 1717846421.671000
+Z43 !s107 E:/Coding/Computer-Organization/Final/mips_single/memory.v|
+Z44 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/memory.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmips_single
+Z45 I>OG_@o;a=]LX]RWU]CE?^0
+Z46 VgzdPULOV?4TESNV;3BbS?2
+R3
+R4
+Z47 8E:/Coding/Computer-Organization/Final/mips_single/mips_single.v
+Z48 FE:/Coding/Computer-Organization/Final/mips_single/mips_single.v
+L0 3
+R7
+r1
+31
+R8
+Z49 !s100 :5Ih[ahTHPz7zK_Vbo6hj3
+Z50 !s108 1717846421.718000
+Z51 !s107 E:/Coding/Computer-Organization/Final/mips_single/mips_single.v|
+Z52 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/mips_single.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux2
+Z53 IIDjKHBMdW5M1g:7>_<SeT3
+Z54 Vj@f`a>EYID42B4HRj1CP`1
+R3
+R4
+Z55 8E:/Coding/Computer-Organization/Final/mips_single/mux2.v
+Z56 FE:/Coding/Computer-Organization/Final/mips_single/mux2.v
+L0 5
+R7
+r1
+31
+R8
+Z57 !s100 `lO7LcY5`AC;iFYM8zeRB3
+Z58 !s108 1717846421.761000
+Z59 !s107 E:/Coding/Computer-Organization/Final/mips_single/mux2.v|
+Z60 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/mux2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vreg32
+Z61 Igm^SM3W9[7ZL`3M@Y46X40
+Z62 V4bcQWEI[Z8fXRzc;L8:=h0
+R3
+R4
+Z63 8E:/Coding/Computer-Organization/Final/mips_single/reg32.v
+Z64 FE:/Coding/Computer-Organization/Final/mips_single/reg32.v
+L0 13
+R7
+r1
+31
+R8
+Z65 !s100 4L73Ko6`oJPIiMN=00WKm2
+Z66 !s108 1717846421.847000
+Z67 !s107 E:/Coding/Computer-Organization/Final/mips_single/reg32.v|
+Z68 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/reg32.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vreg_file
+Z69 ID2l8]X<^dFCz01lS_l8DH2
+Z70 VYLAOAi5U8OG?Ke_4jenLM0
+R3
+Z71 w1717271838
+Z72 8E:/Coding/Computer-Organization/Final/mips_single/reg_file.v
+Z73 FE:/Coding/Computer-Organization/Final/mips_single/reg_file.v
+L0 16
+R7
+r1
+31
+R8
+Z74 !s100 PC_I]Rf]ggk@AKERE;@=`1
+Z75 !s108 1717846421.803000
+Z76 !s107 E:/Coding/Computer-Organization/Final/mips_single/reg_file.v|
+Z77 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/reg_file.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vsign_extend
+Z78 IW^9aTWGTNH7QYd15235<`3
+Z79 V0n8ATCOUh4>@]U0Sa]?X82
+R3
+R4
+Z80 8E:/Coding/Computer-Organization/Final/mips_single/sign extend.v
+Z81 FE:/Coding/Computer-Organization/Final/mips_single/sign extend.v
+L0 10
+R7
+r1
+31
+R8
+!i10b 1
+Z82 !s100 oCOlE7e4AA=@fjYA]hYQ43
+!s85 0
+Z83 !s108 1717846421.894000
+Z84 !s107 E:/Coding/Computer-Organization/Final/mips_single/sign extend.v|
+Z85 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/sign extend.v|
+!s101 -O0
+vtb_SingleCycle
+!i10b 1
+!s100 TdIM3Rh^jCamkSOaXHGGK2
+IJ`fldPm82@z=io=d=ffDL0
+V?^jDZQg<T7eMH8E80iM6b1
+R3
+R4
+8E:/Coding/Computer-Organization/Final/mips_single/tb_SingleCycle.v
+FE:/Coding/Computer-Organization/Final/mips_single/tb_SingleCycle.v
+L0 5
+R7
+r1
+!s85 0
+31
+!s108 1717846421.937000
+!s107 E:/Coding/Computer-Organization/Final/mips_single/tb_SingleCycle.v|
+!s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/mips_single/tb_SingleCycle.v|
+!s101 -O0
+R8
+ntb_@single@cycle

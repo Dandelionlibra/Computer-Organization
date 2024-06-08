@@ -38,17 +38,17 @@ module tb_Pipeline();
 			else if ( CPU.funct == 6'd36 ) $display( "%d, AND\n", $time/10-1 );
 			else if ( CPU.funct == 6'd37 ) $display( "%d, OR\n", $time/10-1 );
 			
-			else if ( CPU.opcode == 6'd0  )
+			else if ( CPU.funct == 6'd0  )
 				if(CPU.rs == 0 && CPU.rt == 0 && CPU.rd == 0)
 					$display( "%d, Nop\n", $time/10-1 );
 				else
 					$display( "%d, sll\n", $time/10-1 );
-			else if ( CPU.opcode == 6'd25 )
+			else if ( CPU.funct == 6'd25 )
 			begin
-				$display( "%d, Mulit\n", $time/10-1 );
+				$display( "%d, Multu\n", $time/10-1 );
 			end
-			else if ( CPU.opcode == 6'd10 ) $display( "%d, Hi\n", $time/10-1 );
-			else if ( CPU.opcode == 6'd12 ) $display( "%d, Lo\n", $time/10-1 );
+			else if ( CPU.funct == 6'd10 ) $display( "%d, Hi\n", $time/10-1 );
+			else if ( CPU.funct == 6'd12 ) $display( "%d, Lo\n", $time/10-1 );
 		end
 		else if ( CPU.opcode == 6'd35 ) $display( "%d, LW\n", $time/10-1 );
 		else if ( CPU.opcode == 6'd43 ) $display( "%d, SW\n", $time/10-1 );
