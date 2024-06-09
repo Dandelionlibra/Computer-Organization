@@ -20,9 +20,6 @@ output reg [2:0] ALUOperation ;
 output reg [5:0] SignaltoMULTU ;
 output reg [1:0] SelHilo ;
 
-// 宣告 7 位元的暫存器
-reg [6:0] counter ;
-
 // 定義參數常數(可提升可讀性)
 // Check 4-1 P.61
 parameter ALU_AND = 3'b000;
@@ -45,7 +42,7 @@ parameter Funct_MULTU = 6'b011001; //   MULTU: 25
 parameter Funct_MFHI = 6'b010000; //   HiLo : 16
 parameter Funct_MFLO = 6'b010010; //   HiLo : 18
 
-
+/*
 // 每當 Funct 有變化時，驅動以下電路
 always@( Funct )
 begin
@@ -73,10 +70,11 @@ begin
             
 		end
 	end
-end
+end*/
 
 always@( ALUOp or Funct )
 begin
+    SignaltoMULTU = 0;
     SelHilo = 2'b00;
     case(ALUOp)
         2'b00: ALUOperation = ALU_ADD;
@@ -89,6 +87,7 @@ begin
                 Funct_OR: ALUOperation = ALU_OR;
                 Funct_SLT: ALUOperation = ALU_SLT;
                 Funct_SLL: ALUOperation = ALU_SLL;
+                Funct_MULTU: SignaltoMULTU = Funct_MULTU;
                 Funct_MFHI: SelHilo = 2'b01;
                 Funct_MFLO: SelHilo = 2'b10;
                 default: ALUOperation = 3'bxxx;
