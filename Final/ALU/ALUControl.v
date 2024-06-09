@@ -42,36 +42,8 @@ parameter Funct_MULTU = 6'b011001; //   MULTU: 25
 parameter Funct_MFHI = 6'b010000; //   HiLo : 16
 parameter Funct_MFLO = 6'b010010; //   HiLo : 18
 
-/*
-// 每當 Funct 有變化時，驅動以下電路
-always@( Funct )
-begin
-  if ( Funct == Funct_MULTU )
-  begin
-	// 若當前訊號為乘法運算，初始化 counter 為 0
-    counter = 0 ;
-  end
-end
 
-// 定義電路以 clk 正緣觸發
-always@( posedge clk )
-begin
-	if ( Funct == Funct_MULTU )
-	begin
-		// 若當前訊號為乘法運算，將 counter + 1
-    
-        SignaltoMULTU = Funct_MULTU ; // MULTU
-		counter = counter + 1 ;
-		if ( counter == 32 )
-		begin
-			// 若 counter 為 32，將 temp 設為 0b111111 以開啟 HiLo 的輸出
-			SignaltoMULTU = ALU_OpenHiLo ; // Open HiLo reg for Mul
-			counter = 0 ; // 將 counter 重置為 0
-            
-		end
-	end
-end*/
-
+// 每當 Funct 或 ALUOp 有變化時，驅動以下電路
 always@( ALUOp or Funct )
 begin
     SignaltoMULTU = 0;

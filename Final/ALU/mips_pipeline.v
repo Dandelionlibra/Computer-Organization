@@ -118,7 +118,7 @@ module mips_pipeline( clk, rst );
 
     BEQ beq( .opcode(opcode), .zero(Zero), .a(rfile_rd1), .b(rfile_rd2) );
 
-    and BR_AND(PCSrc, MEM_ID[0], Zero );
+    and BR_AND(PCSrc, MEM_ID[0], Zero ); // PCSrc = MEM_ID[0] & Zero
 
     // EX stage
 

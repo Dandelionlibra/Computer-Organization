@@ -19,24 +19,6 @@ reg [31:0] multiply, multiplicand ;
 parameter MULTU = 6'b011001;
 parameter OUT = 6'b111111;
 
-/*
-// 每當 dataA 有變化時，將被乘數設為 dataA 的值
-always@(dataA)
-begin
-    multiplicand = dataA;
-end
-
-// 每當 dataB 有變化時，將乘數設為 dataB 的值
-always@(dataB)
-begin
-    multiply = dataB;
-end
-*/
-
-/*always@(Signal)
-begin
-    product = 64'd0;
-end*/
 
 // 定義電路以 clk 或 reset 正緣觸發
 always@( posedge clk or reset )
@@ -50,22 +32,13 @@ begin
     else
     begin
 		if( Signal == MULTU )
-		begin
-			 // 若未到達 32 次，判斷乘數第 0 位是否為 1，如果是則將被乘數加到 product 左半部
-            /*if (multiply[0] == 1'b1)
-			begin
-                product[63:32] = product[63:32] + multiplicand;
-            end
-			// 將乘積與乘數右移 1 位元
-            product = product >> 1;
-            multiply = multiply >> 1;*/
-            multiplicand = dataA;
-            multiply = dataB;
+		begin // 初始化
+            multiplicand = dataA; // 將被乘數設為 dataA 的值
+            multiply = dataB; // 將乘數設為 dataB 的值
             out = 0;
             counter = 0;
             product = 64'd0;
 		end
-
 
         if ( out == 0 )
         begin
@@ -74,18 +47,19 @@ begin
                 out = 1;
                 dataOut = product;
             end
+			// 若未到達 32 次，判斷乘數第 0 位是否為 1，如果是則將被乘數加到 product 左半部
             else if (counter < 32)
             begin
                 if (multiply[0] == 1'b1)
                 begin
                     product[63:32] = product[63:32] + multiplicand;
                 end
+				// 將乘積與乘數右移 1 位元
                 product = product >> 1;
                 multiply = multiply >> 1;  
             end
             counter = counter + 1;
         end
-
 
     end
 

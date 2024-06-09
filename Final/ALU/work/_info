@@ -4,514 +4,514 @@ K3
 cModel Technology
 Z0 dE:\Coding\Computer-Organization\Final\ALU
 vadd32
-Z1 !s100 >6f=V@NR3ChbIIhO=5I;V2
-Z2 IURPf?c1Ji93kfGRog@UH10
-Z3 VU=ZXz5UM7[GT`X^NWc0cQ1
-Z4 dE:\Coding\Computer-Organization\Final\ALU
-Z5 w1717845846
-Z6 8E:/Coding/Computer-Organization/Final/ALU/add32.v
-Z7 FE:/Coding/Computer-Organization/Final/ALU/add32.v
+Z1 IG?Hf9ITfhgKDGFLT=l_8D0
+Z2 VU=ZXz5UM7[GT`X^NWc0cQ1
+Z3 dC:\Users\user\Desktop\Computer Organization\Final\ALU
+Z4 w1717557192
+Z5 8C:/Users/user/Desktop/Computer Organization/Final/ALU/add32.v
+Z6 FC:/Users/user/Desktop/Computer Organization/Final/ALU/add32.v
 L0 5
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/add32.v|
-Z10 o-work work -O0
-Z11 !s108 1717938893.091000
-Z12 !s107 E:/Coding/Computer-Organization/Final/ALU/add32.v|
+Z8 o-work work -O0
+Z9 !s100 I7Zgz_3TjUCE9<20EmQ=50
+Z10 !s108 1717953280.353000
+Z11 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/add32.v|
+Z12 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/add32.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU
-Z13 !s100 QO:CIOf`L=iRI15a<0cj`1
-Z14 IAi?1ZO;U:BFgZn?8:UAUj3
-Z15 V<<=8CX@76dofQ[@LIg>GI1
-R4
-Z16 w1717511406
-Z17 8E:/Coding/Computer-Organization/Final/ALU/ALU.v
-Z18 FE:/Coding/Computer-Organization/Final/ALU/ALU.v
+Z13 IeKRn5_529OiREkUOE^fV10
+Z14 V<<=8CX@76dofQ[@LIg>GI1
+R3
+Z15 w1717554083
+Z16 8C:/Users/user/Desktop/Computer Organization/Final/ALU/ALU.v
+Z17 FC:/Users/user/Desktop/Computer Organization/Final/ALU/ALU.v
 L0 4
-R8
+R7
 r1
 31
-Z19 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/ALU.v|
-R10
-Z20 n@a@l@u
-Z21 !s108 1717938893.171000
-Z22 !s107 E:/Coding/Computer-Organization/Final/ALU/ALU.v|
+R8
+Z18 n@a@l@u
+Z19 !s100 TcT]B4CB3BQQ1<bamh0]Q0
+Z20 !s108 1717953280.437000
+Z21 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/ALU.v|
+Z22 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/ALU.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALU_MUX4_1
-Z23 !s100 1Q8>?Ec7i;bY<T;h4?b_h2
-Z24 I[9HK4@XeUBzPZGe587nII0
-Z25 VMWB8A3f9ea8hV3BN85I4Z1
-R4
-Z26 w1717506182
-Z27 8E:/Coding/Computer-Organization/Final/ALU/ALU_MUX4_1.v
-Z28 FE:/Coding/Computer-Organization/Final/ALU/ALU_MUX4_1.v
+Z23 Io`P:gLeSYNNolabOW0P;?3
+Z24 VMWB8A3f9ea8hV3BN85I4Z1
+R3
+R15
+Z25 8C:/Users/user/Desktop/Computer Organization/Final/ALU/ALU_MUX4_1.v
+Z26 FC:/Users/user/Desktop/Computer Organization/Final/ALU/ALU_MUX4_1.v
 L0 2
-R8
+R7
 r1
 31
-Z29 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/ALU_MUX4_1.v|
-R10
-Z30 n@a@l@u_@m@u@x4_1
-Z31 !s108 1717938893.265000
-Z32 !s107 E:/Coding/Computer-Organization/Final/ALU/ALU_MUX4_1.v|
+R8
+Z27 n@a@l@u_@m@u@x4_1
+Z28 !s100 =Q:PizZW1LXAMO[Qo=7DX2
+Z29 !s108 1717953280.514000
+Z30 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/ALU_MUX4_1.v|
+Z31 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/ALU_MUX4_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALUbit
-Z33 !s100 P^0[:86m];Zo_N94g[d^N2
-Z34 I2=H[MSZaWU2X=U=041CSP3
-Z35 V_1Mh_030h9PFC?VNdO>]f0
-R4
-Z36 w1717506231
-Z37 8E:/Coding/Computer-Organization/Final/ALU/ALUbit.v
-Z38 FE:/Coding/Computer-Organization/Final/ALU/ALUbit.v
+Z32 I;Q2cV<GXn>b_]PoXlFSUC1
+Z33 V_1Mh_030h9PFC?VNdO>]f0
+R3
+R15
+Z34 8C:/Users/user/Desktop/Computer Organization/Final/ALU/ALUbit.v
+Z35 FC:/Users/user/Desktop/Computer Organization/Final/ALU/ALUbit.v
 L0 4
-R8
+R7
 r1
 31
-Z39 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/ALUbit.v|
-R10
-Z40 n@a@l@ubit
-Z41 !s108 1717938893.333000
-Z42 !s107 E:/Coding/Computer-Organization/Final/ALU/ALUbit.v|
+R8
+Z36 n@a@l@ubit
+Z37 !s100 ]9a`A9jjed^ajeMODeiWU1
+Z38 !s108 1717953280.576000
+Z39 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/ALUbit.v|
+Z40 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/ALUbit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vALUControl
-Z43 IRPP2I:?L^Qi536>O6k90k1
-Z44 V9bn6>8n=P:_7SEbncMDJX2
-R4
-Z45 w1717938822
-Z46 8E:/Coding/Computer-Organization/Final/ALU/ALUControl.v
-Z47 FE:/Coding/Computer-Organization/Final/ALU/ALUControl.v
+Z41 I?D:T[9QR3XX=X[O9c;2aV1
+Z42 V9bn6>8n=P:_7SEbncMDJX2
+R3
+Z43 w1717952050
+Z44 8C:/Users/user/Desktop/Computer Organization/Final/ALU/ALUControl.v
+Z45 FC:/Users/user/Desktop/Computer Organization/Final/ALU/ALUControl.v
 L0 13
-R8
+R7
 r1
 31
-Z48 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/ALUControl.v|
-R10
-Z49 n@a@l@u@control
-Z50 !s100 iaMKG8Y9OS5R40c=nCaLQ1
-Z51 !s108 1717938893.393000
-Z52 !s107 E:/Coding/Computer-Organization/Final/ALU/ALUControl.v|
+R8
+Z46 n@a@l@u@control
+Z47 !s100 DbNFPBH<2d=e2AG]RSi6l2
+Z48 !s108 1717953280.640000
+Z49 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/ALUControl.v|
+Z50 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/ALUControl.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vBEQ
-Z53 !s100 P1ZV9X4fO_C4Plgij11AG2
-Z54 ICFGkg=9zT8PAX8X6R]5BY0
-Z55 VzUn[ieh^O;4?Fcj;]hCI^3
-R4
-R5
-Z56 8E:/Coding/Computer-Organization/Final/ALU/BEQ.v
-Z57 FE:/Coding/Computer-Organization/Final/ALU/BEQ.v
+Z51 IWL^Z]kT69?IaSd06USWeW2
+Z52 VzUn[ieh^O;4?Fcj;]hCI^3
+R3
+Z53 w1717555299
+Z54 8C:/Users/user/Desktop/Computer Organization/Final/ALU/BEQ.v
+Z55 FC:/Users/user/Desktop/Computer Organization/Final/ALU/BEQ.v
 L0 3
-R8
+R7
 r1
 31
-Z58 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/BEQ.v|
-R10
-Z59 n@b@e@q
-Z60 !s108 1717938893.454000
-Z61 !s107 E:/Coding/Computer-Organization/Final/ALU/BEQ.v|
+R8
+Z56 n@b@e@q
+Z57 !s100 8B:LHWIlE<W?hHWQ7XTaH0
+Z58 !s108 1717953280.704000
+Z59 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/BEQ.v|
+Z60 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/BEQ.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vControlUnit
-Z62 !s100 V?N4cG^Wnon6@6eR9Z1IE2
-Z63 IE7O2m030J9A;G2c>OoGQN0
-Z64 Vc?gMzgQo788RiYRWS2^3h1
-R4
-Z65 w1717846110
-Z66 8E:/Coding/Computer-Organization/Final/ALU/ControlUnit.v
-Z67 FE:/Coding/Computer-Organization/Final/ALU/ControlUnit.v
+Z61 IgkJ28Ii;=866`^=nDRQiH3
+Z62 Vc?gMzgQo788RiYRWS2^3h1
+R3
+Z63 w1717945039
+Z64 8C:/Users/user/Desktop/Computer Organization/Final/ALU/ControlUnit.v
+Z65 FC:/Users/user/Desktop/Computer Organization/Final/ALU/ControlUnit.v
 L0 21
-R8
+R7
 r1
 31
-Z68 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/ControlUnit.v|
-R10
-Z69 n@control@unit
-Z70 !s108 1717938893.517000
-Z71 !s107 E:/Coding/Computer-Organization/Final/ALU/ControlUnit.v|
+R8
+Z66 n@control@unit
+Z67 !s100 5cIOATR:R4ZPOEJo>A;Ti0
+Z68 !s108 1717953280.764000
+Z69 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/ControlUnit.v|
+Z70 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/ControlUnit.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vEX_MEM
-Z72 !s100 a6Vdf9J;RzYLOaVGMbAN52
-Z73 IEiBgRm21AJlEaZ:^[B44z1
-Z74 VX6VT=:LbfOL?;eK]HTNlb0
-R4
-R5
-Z75 8E:/Coding/Computer-Organization/Final/ALU/EX_MEM.v
-Z76 FE:/Coding/Computer-Organization/Final/ALU/EX_MEM.v
+Z71 IWk7?B4ZA0cU`8XFh9U6HN0
+Z72 VX6VT=:LbfOL?;eK]HTNlb0
+R3
+Z73 w1717557033
+Z74 8C:/Users/user/Desktop/Computer Organization/Final/ALU/EX_MEM.v
+Z75 FC:/Users/user/Desktop/Computer Organization/Final/ALU/EX_MEM.v
 L0 4
-R8
+R7
 r1
 31
-Z77 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/EX_MEM.v|
-R10
-Z78 n@e@x_@m@e@m
-Z79 !s108 1717938893.578000
-Z80 !s107 E:/Coding/Computer-Organization/Final/ALU/EX_MEM.v|
+R8
+Z76 n@e@x_@m@e@m
+Z77 !s100 3E[gN;9>PN:<I@Q>X2mib3
+Z78 !s108 1717953280.826000
+Z79 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/EX_MEM.v|
+Z80 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/EX_MEM.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vFullAdder
-Z81 !s100 hF9N5g89HSI5nDEM8<3db0
-Z82 IlT98Hi_CCjP<zI`dIj;do1
-Z83 VcII[::[2R5ZmPZ9a@hG292
-R4
-Z84 w1717259409
-Z85 8E:/Coding/Computer-Organization/Final/ALU/FullAdder.v
-Z86 FE:/Coding/Computer-Organization/Final/ALU/FullAdder.v
+Z81 Ia]jhZ5Dn`4VzWnR3:d8B11
+Z82 VcII[::[2R5ZmPZ9a@hG292
+R3
+Z83 w1715947853
+Z84 8C:/Users/user/Desktop/Computer Organization/Final/ALU/FullAdder.v
+Z85 FC:/Users/user/Desktop/Computer Organization/Final/ALU/FullAdder.v
 L0 4
-R8
+R7
 r1
 31
-Z87 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/FullAdder.v|
-R10
-Z88 n@full@adder
-Z89 !s108 1717938893.659000
-Z90 !s107 E:/Coding/Computer-Organization/Final/ALU/FullAdder.v|
+R8
+Z86 n@full@adder
+Z87 !s100 kDi6ZVcg2Jgl6>h1`@6MK1
+Z88 !s108 1717953280.892000
+Z89 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/FullAdder.v|
+Z90 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/FullAdder.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vHiLo
-Z91 !s100 S=hX[me8[AVQG8?oEVhMM0
-Z92 IQohRe2V^0`6HD5G9G6W3j3
-Z93 VEz^BM2N6<H`?=4WWA[Yd<3
-R4
-R84
-Z94 8E:/Coding/Computer-Organization/Final/ALU/HiLo.v
-Z95 FE:/Coding/Computer-Organization/Final/ALU/HiLo.v
+Z91 I:;Xkl=Ph`;N6mf2YTdA@c0
+Z92 VEz^BM2N6<H`?=4WWA[Yd<3
+R3
+Z93 w1715948428
+Z94 8C:/Users/user/Desktop/Computer Organization/Final/ALU/HiLo.v
+Z95 FC:/Users/user/Desktop/Computer Organization/Final/ALU/HiLo.v
 L0 4
-R8
+R7
 r1
 31
-Z96 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/HiLo.v|
-R10
-Z97 n@hi@lo
-Z98 !s108 1717938893.789000
-Z99 !s107 E:/Coding/Computer-Organization/Final/ALU/HiLo.v|
+R8
+Z96 n@hi@lo
+Z97 !s100 >]L0f1n0PR49LloJ]VhdG0
+Z98 !s108 1717953280.954000
+Z99 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/HiLo.v|
+Z100 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/HiLo.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vID_EX
-Z100 !s100 g1e72^SIP>H9mW:K2bUWS2
-Z101 IUJA7^z2LLMZkA]QkYDAof2
+Z101 IDa4LmX]RJTdTALb<9Ao4S1
 Z102 V@Bc0oNG?DZW@oiQmB;llL0
-R4
-R5
-Z103 8E:/Coding/Computer-Organization/Final/ALU/ID_EX.v
-Z104 FE:/Coding/Computer-Organization/Final/ALU/ID_EX.v
+R3
+Z103 w1717556785
+Z104 8C:/Users/user/Desktop/Computer Organization/Final/ALU/ID_EX.v
+Z105 FC:/Users/user/Desktop/Computer Organization/Final/ALU/ID_EX.v
 L0 4
-R8
+R7
 r1
 31
-Z105 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/ID_EX.v|
-R10
+R8
 Z106 n@i@d_@e@x
-Z107 !s108 1717938893.851000
-Z108 !s107 E:/Coding/Computer-Organization/Final/ALU/ID_EX.v|
+Z107 !s100 ETSbdlCN?>UI9NLT@4dob2
+Z108 !s108 1717953281.019000
+Z109 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/ID_EX.v|
+Z110 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/ID_EX.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vIF_ID
-Z109 !s100 [l_WZCK^OQS42VCo=gFig2
-Z110 I5L3P:A5f3]kMM@YLRh[bG2
-Z111 VE>l5YAE<R5hg`oidi;LnJ2
-R4
-Z112 w1717477443
-Z113 8E:/Coding/Computer-Organization/Final/ALU/IF_ID.v
-Z114 FE:/Coding/Computer-Organization/Final/ALU/IF_ID.v
+Z111 INE[m]j>ZdH50?4zh_M=Y_0
+Z112 VE>l5YAE<R5hg`oidi;LnJ2
+R3
+R15
+Z113 8C:/Users/user/Desktop/Computer Organization/Final/ALU/IF_ID.v
+Z114 FC:/Users/user/Desktop/Computer Organization/Final/ALU/IF_ID.v
 L0 4
-R8
+R7
 r1
 31
-Z115 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/IF_ID.v|
-R10
-Z116 n@i@f_@i@d
-Z117 !s108 1717938893.911000
-Z118 !s107 E:/Coding/Computer-Organization/Final/ALU/IF_ID.v|
+R8
+Z115 n@i@f_@i@d
+Z116 !s100 U0@HSK1LVE?RV57efBL>E3
+Z117 !s108 1717953281.080000
+Z118 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/IF_ID.v|
+Z119 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/IF_ID.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMEM_WB
-Z119 !s100 eaiEYDe2=YOXbT7YA9bj?1
-Z120 IanRen^ZS5]h5X77Bn_<cS3
+Z120 IBK:Kog5HE3O96=aY9n<NQ0
 Z121 VW>z5``0A^jz8bF7F9;8ck3
-R4
-R5
-Z122 8E:/Coding/Computer-Organization/Final/ALU/MEM_WB.v
-Z123 FE:/Coding/Computer-Organization/Final/ALU/MEM_WB.v
+R3
+Z122 w1717557035
+Z123 8C:/Users/user/Desktop/Computer Organization/Final/ALU/MEM_WB.v
+Z124 FC:/Users/user/Desktop/Computer Organization/Final/ALU/MEM_WB.v
 L0 4
-R8
+R7
 r1
 31
-Z124 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/MEM_WB.v|
-R10
+R8
 Z125 n@m@e@m_@w@b
-Z126 !s108 1717938893.971000
-Z127 !s107 E:/Coding/Computer-Organization/Final/ALU/MEM_WB.v|
+Z126 !s100 cWf`3_g8W3QhA7^na0E;72
+Z127 !s108 1717953281.141000
+Z128 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/MEM_WB.v|
+Z129 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/MEM_WB.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmemory
-Z128 !s100 m]a[V_E9XmRZMEZ0fZFB81
-Z129 I>dML`1HacZZ8`M7cfHGC03
-Z130 VSPBB>2d4PV07m82El[]@^0
-R4
-R84
-Z131 8E:/Coding/Computer-Organization/Final/ALU/memory.v
-Z132 FE:/Coding/Computer-Organization/Final/ALU/memory.v
+Z130 IRa?BXS^<2Fi;;[>ImO8m^0
+Z131 VSPBB>2d4PV07m82El[]@^0
+R3
+Z132 w1717948902
+Z133 8C:/Users/user/Desktop/Computer Organization/Final/ALU/memory.v
+Z134 FC:/Users/user/Desktop/Computer Organization/Final/ALU/memory.v
 L0 14
-R8
+R7
 r1
 31
-Z133 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/memory.v|
-R10
-Z134 !s108 1717938894.033000
-Z135 !s107 E:/Coding/Computer-Organization/Final/ALU/memory.v|
+R8
+Z135 !s100 RE]WG6<mggWYZDOeLH92L3
+Z136 !s108 1717953281.207000
+Z137 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/memory.v|
+Z138 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/memory.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmips_pipeline
-Z136 !s100 beCL43lcV?=KBScH9En:62
-Z137 IjHbjZMU4C:P:1U7IeI>OO3
-Z138 VA@@iAkVF_F@BA4mLnEEzJ0
-R4
-R5
-Z139 8E:/Coding/Computer-Organization/Final/ALU/mips_pipeline.v
-Z140 FE:/Coding/Computer-Organization/Final/ALU/mips_pipeline.v
+Z139 IHFh?<k_9ko?b`kVg8]e[V2
+Z140 VA@@iAkVF_F@BA4mLnEEzJ0
+R3
+Z141 w1717951704
+Z142 8C:/Users/user/Desktop/Computer Organization/Final/ALU/mips_pipeline.v
+Z143 FC:/Users/user/Desktop/Computer Organization/Final/ALU/mips_pipeline.v
 L0 4
-R8
+R7
 r1
 31
-Z141 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/mips_pipeline.v|
-R10
-Z142 !s108 1717938894.104000
-Z143 !s107 E:/Coding/Computer-Organization/Final/ALU/mips_pipeline.v|
+R8
+Z144 !s100 =94_MbNlV10:MES9Fi^L61
+Z145 !s108 1717953281.269000
+Z146 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/mips_pipeline.v|
+Z147 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/mips_pipeline.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMultiplier
-Z144 Ia3OR<FaU;4coH5B]MUV=n2
-Z145 VoJh;4`P^m2Pco7c5=dloT3
-R4
-Z146 w1717938835
-Z147 8E:/Coding/Computer-Organization/Final/ALU/Multiplier.v
-Z148 FE:/Coding/Computer-Organization/Final/ALU/Multiplier.v
+Z148 IKiK1NLMTb9A_9l2:j<5fi2
+Z149 VoJh;4`P^m2Pco7c5=dloT3
+R3
+Z150 w1717952361
+Z151 8C:/Users/user/Desktop/Computer Organization/Final/ALU/Multiplier.v
+Z152 FC:/Users/user/Desktop/Computer Organization/Final/ALU/Multiplier.v
 L0 4
-R8
+R7
 r1
 31
-R10
-Z149 n@multiplier
-Z150 !s100 nM@bnW;Mk?7k<8LY_20BH3
-Z151 !s108 1717938894.172000
-Z152 !s107 E:/Coding/Computer-Organization/Final/ALU/Multiplier.v|
-Z153 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/Multiplier.v|
+R8
+Z153 n@multiplier
+Z154 !s100 ^b^aHnBlL6?B;jIQd?c1J1
+Z155 !s108 1717953281.327000
+Z156 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/Multiplier.v|
+Z157 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/Multiplier.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX
-Z154 !s100 me0S2Nfgn=a:U7i_VmCiB3
-Z155 I[Yf:VY9R`z58H>TRo]n@n2
-Z156 VQDmNkPc=TSk7@bXC^:=A43
-R4
-R84
-Z157 8E:/Coding/Computer-Organization/Final/ALU/MUX.v
-Z158 FE:/Coding/Computer-Organization/Final/ALU/MUX.v
+Z158 I[@?oHieAa]f6;KV:35l`O2
+Z159 VQDmNkPc=TSk7@bXC^:=A43
+R3
+Z160 w1715947546
+Z161 8C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX.v
+Z162 FC:/Users/user/Desktop/Computer Organization/Final/ALU/MUX.v
 L0 4
-R8
+R7
 r1
 31
-Z159 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/MUX.v|
-R10
-Z160 n@m@u@x
-Z161 !s108 1717938894.233000
-Z162 !s107 E:/Coding/Computer-Organization/Final/ALU/MUX.v|
+R8
+Z163 n@m@u@x
+Z164 !s100 ihNNZ1cNdmBKIc8Gh8N]?1
+Z165 !s108 1717953281.384000
+Z166 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX.v|
+Z167 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux2
-Z163 !s100 PGhD<8VlzfQjOM`AiL;I[0
-Z164 IDY<1hSfjQK`WOeacST9^h2
-Z165 Vj@f`a>EYID42B4HRj1CP`1
-R4
-R84
-Z166 8E:/Coding/Computer-Organization/Final/ALU/mux2.v
-Z167 FE:/Coding/Computer-Organization/Final/ALU/mux2.v
+Z168 I^XShEiVL97e0gOf75<CVm3
+Z169 Vj@f`a>EYID42B4HRj1CP`1
+R3
+Z170 w1717431516
+Z171 8C:/Users/user/Desktop/Computer Organization/Final/ALU/mux2.v
+Z172 FC:/Users/user/Desktop/Computer Organization/Final/ALU/mux2.v
 L0 5
-R8
+R7
 r1
 31
-Z168 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/mux2.v|
-R10
-Z169 !s108 1717938894.292000
-Z170 !s107 E:/Coding/Computer-Organization/Final/ALU/mux2.v|
+R8
+Z173 !s100 IohkV_K=TdXNa3=Bkc@Ul0
+Z174 !s108 1717953281.446000
+Z175 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/mux2.v|
+Z176 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/mux2.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX2_1
-Z171 !s100 3S2:CoCN;<X7>AS:>mhNP3
-Z172 IFha_51L_SDoh@:caOl7Wa0
-Z173 V`2G`go3<o>]D0e1D55:Rb1
-R4
-R84
-Z174 8E:/Coding/Computer-Organization/Final/ALU/MUX2_1.v
-Z175 FE:/Coding/Computer-Organization/Final/ALU/MUX2_1.v
+Z177 I^CQEY?2@b<gScNG3LDj:83
+Z178 V`2G`go3<o>]D0e1D55:Rb1
+R3
+Z179 w1715949104
+Z180 8C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX2_1.v
+Z181 FC:/Users/user/Desktop/Computer Organization/Final/ALU/MUX2_1.v
 L0 2
-R8
+R7
 r1
 31
-Z176 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/MUX2_1.v|
-R10
-Z177 n@m@u@x2_1
-Z178 !s108 1717938894.349000
-Z179 !s107 E:/Coding/Computer-Organization/Final/ALU/MUX2_1.v|
+R8
+Z182 n@m@u@x2_1
+Z183 !s100 n>k=Q[WZOSb7h@Jf7OKoC0
+Z184 !s108 1717953281.514000
+Z185 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX2_1.v|
+Z186 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX2_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vMUX3_1
-Z180 !s100 _fkTQk<S2^I@SGeggWmV^1
-Z181 I^SkIBKSF[aC6EO02CLEl11
-Z182 V5;RW]AaoI2J`PcQ63jzjP0
-R4
-Z183 w1717505830
-Z184 8E:/Coding/Computer-Organization/Final/ALU/MUX3_1.v
-Z185 FE:/Coding/Computer-Organization/Final/ALU/MUX3_1.v
+Z187 I@iLigoBANFD3BLz:>MaWh3
+Z188 V5;RW]AaoI2J`PcQ63jzjP0
+R3
+R15
+Z189 8C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX3_1.v
+Z190 FC:/Users/user/Desktop/Computer Organization/Final/ALU/MUX3_1.v
 L0 2
-R8
+R7
 r1
 31
-Z186 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/MUX3_1.v|
-R10
-Z187 n@m@u@x3_1
-Z188 !s108 1717938894.409000
-Z189 !s107 E:/Coding/Computer-Organization/Final/ALU/MUX3_1.v|
+R8
+Z191 n@m@u@x3_1
+Z192 !s100 UWKU43>bA52jZS1e]na8Z1
+Z193 !s108 1717953281.577000
+Z194 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX3_1.v|
+Z195 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/MUX3_1.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vreg32
-Z190 !s100 z]=W3J;GJoDEUjHB0Yh>41
-Z191 IWO1hzAjcBg:MRQzM@]DfU1
-Z192 V4bcQWEI[Z8fXRzc;L8:=h0
-R4
-R84
-Z193 8E:/Coding/Computer-Organization/Final/ALU/reg32.v
-Z194 FE:/Coding/Computer-Organization/Final/ALU/reg32.v
+Z196 IR68X8N_WI;fNoW>7^Ed7E0
+Z197 V4bcQWEI[Z8fXRzc;L8:=h0
+R3
+Z198 w1717288462
+Z199 8C:/Users/user/Desktop/Computer Organization/Final/ALU/reg32.v
+Z200 FC:/Users/user/Desktop/Computer Organization/Final/ALU/reg32.v
 L0 13
-R8
+R7
 r1
 31
-Z195 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/reg32.v|
-R10
-Z196 !s108 1717938894.534000
-Z197 !s107 E:/Coding/Computer-Organization/Final/ALU/reg32.v|
+R8
+Z201 !s100 TPeAB>QcORVQAa0@W14_E2
+Z202 !s108 1717953281.695000
+Z203 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/reg32.v|
+Z204 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/reg32.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vreg_file
-Z198 !s100 XIn3kmBmlYobno:o<ET>j0
-Z199 I77SF85QfQf1=81M>didE`0
-Z200 VYLAOAi5U8OG?Ke_4jenLM0
-R4
-Z201 w1717271838
-Z202 8E:/Coding/Computer-Organization/Final/ALU/reg_file.v
-Z203 FE:/Coding/Computer-Organization/Final/ALU/reg_file.v
+Z205 IRY<Pj]VmbfX:f2`JPDo?U1
+Z206 VYLAOAi5U8OG?Ke_4jenLM0
+R3
+Z207 w1717950607
+Z208 8C:/Users/user/Desktop/Computer Organization/Final/ALU/reg_file.v
+Z209 FC:/Users/user/Desktop/Computer Organization/Final/ALU/reg_file.v
 L0 16
-R8
+R7
 r1
 31
-Z204 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/reg_file.v|
-R10
-Z205 !s108 1717938894.468000
-Z206 !s107 E:/Coding/Computer-Organization/Final/ALU/reg_file.v|
+R8
+Z210 !s100 @GVWCz;K<mYWJk<0?4A5?2
+Z211 !s108 1717953281.641000
+Z212 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/reg_file.v|
+Z213 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/reg_file.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vShifter
-Z207 !s100 CchgNfPdQ]e7hBQgeABb[0
-Z208 IJi^]2W9A7Vk4YMd]II>iS3
-Z209 VImGeZFk27=lZjTA@7i2^<2
-R4
-Z210 w1717506354
-Z211 8E:/Coding/Computer-Organization/Final/ALU/Shifter.v
-Z212 FE:/Coding/Computer-Organization/Final/ALU/Shifter.v
+Z214 I>ED0?JO6Cg1?2XWn^YXT>2
+Z215 VImGeZFk27=lZjTA@7i2^<2
+R3
+R15
+Z216 8C:/Users/user/Desktop/Computer Organization/Final/ALU/Shifter.v
+Z217 FC:/Users/user/Desktop/Computer Organization/Final/ALU/Shifter.v
 L0 4
-R8
+R7
 r1
 31
-Z213 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/Shifter.v|
-R10
-Z214 n@shifter
-Z215 !s108 1717938894.596000
-Z216 !s107 E:/Coding/Computer-Organization/Final/ALU/Shifter.v|
+R8
+Z218 n@shifter
+Z219 !s100 VFa7;<>:nkMX6>FfkV:Df0
+Z220 !s108 1717953281.756000
+Z221 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/Shifter.v|
+Z222 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/Shifter.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vsign_extend
-Z217 !s100 f<W5XNgLA2^>J7P`SIVBi0
-Z218 ICSWe?@`Y?NY241K9?>XDU3
-Z219 V0n8ATCOUh4>@]U0Sa]?X82
-R4
-R84
-Z220 8E:/Coding/Computer-Organization/Final/ALU/sign extend.v
-Z221 FE:/Coding/Computer-Organization/Final/ALU/sign extend.v
+Z223 I6[?Eacd=Y9ElN[D6Cakn12
+Z224 V0n8ATCOUh4>@]U0Sa]?X82
+R3
+Z225 w1717230759
+Z226 8C:/Users/user/Desktop/Computer Organization/Final/ALU/sign extend.v
+Z227 FC:/Users/user/Desktop/Computer Organization/Final/ALU/sign extend.v
 L0 4
-R8
+R7
 r1
 31
-Z222 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/sign extend.v|
-R10
-Z223 !s108 1717938894.661000
-Z224 !s107 E:/Coding/Computer-Organization/Final/ALU/sign extend.v|
+R8
+Z228 !s100 7U_k:`N>[I0d6`fReC5kG1
+Z229 !s108 1717953281.827000
+Z230 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/sign extend.v|
+Z231 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/sign extend.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtb_Pipeline
-!i10b 1
-!s100 D?1_HhQN56]HGK?Y7z`d52
-I]GD?2=He:U:>HDDO<O4iA1
-Z225 V4bmNR6Q<czNF_?@[AOX=M2
-R4
-w1717944085
-Z226 8E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v
-Z227 FE:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v
+Z232 IjS7TPY0>R3hikf4MPOl130
+Z233 V4bmNR6Q<czNF_?@[AOX=M2
+R3
+R63
+Z234 8C:/Users/user/Desktop/Computer Organization/Final/ALU/tb_Pipeline.v
+Z235 FC:/Users/user/Desktop/Computer Organization/Final/ALU/tb_Pipeline.v
 L0 5
-R8
-r1
-!s85 0
-31
-!s108 1717944467.987000
-!s107 E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v|
-Z228 !s90 -reportprogress|300|-work|work|-O0|E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v|
-!s101 -O0
-R10
-Z229 ntb_@pipeline
-vunsign_extend
-Z230 !s100 <^aX8VlmXZZ;3YS7[K2K?1
-Z231 IdEXomj_lnXY0Ti<7PSZJz1
-Z232 VMz52WhkbWn]kVY7G0b>iH1
-R4
-Z233 w1717466148
-Z234 8E:/Coding/Computer-Organization/Final/ALU/unsign extend.v
-Z235 FE:/Coding/Computer-Organization/Final/ALU/unsign extend.v
-L0 4
-R8
+R7
 r1
 31
-Z236 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/unsign extend.v|
-R10
-Z237 !s108 1717938894.786000
-Z238 !s107 E:/Coding/Computer-Organization/Final/ALU/unsign extend.v|
+R8
+Z236 ntb_@pipeline
 !i10b 1
+Z237 !s100 m=nIV9@CSR@c53::jSQ?e1
 !s85 0
+Z238 !s108 1717953281.890000
+Z239 !s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/tb_Pipeline.v|
+Z240 !s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/tb_Pipeline.v|
 !s101 -O0
+vunsign_extend
+!i10b 1
+!s100 S2fR9h<`1Im:llB2EjYUa2
+I>>P`Ne_5SQYgH<MP:n3a>0
+Z241 VMz52WhkbWn]kVY7G0b>iH1
+R3
+R15
+8C:/Users/user/Desktop/Computer Organization/Final/ALU/unsign extend.v
+FC:/Users/user/Desktop/Computer Organization/Final/ALU/unsign extend.v
+L0 4
+R7
+r1
+!s85 0
+31
+!s108 1717953281.946000
+!s107 C:/Users/user/Desktop/Computer Organization/Final/ALU/unsign extend.v|
+!s90 -reportprogress|300|-work|work|C:/Users/user/Desktop/Computer Organization/Final/ALU/unsign extend.v|
+!s101 -O0
+R8
