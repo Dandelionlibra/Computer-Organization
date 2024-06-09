@@ -64,7 +64,7 @@ module tb_Pipeline();
 
     always @(posedge clk) begin
         cnt = cnt + 1;
-        if (cnt == 200) $stop;
+        if (cnt == 2000) $stop;
     end
 	
 	mips_pipeline CPU( clk, rst );

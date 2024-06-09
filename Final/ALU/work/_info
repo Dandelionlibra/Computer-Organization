@@ -477,41 +477,41 @@ Z224 !s107 E:/Coding/Computer-Organization/Final/ALU/sign extend.v|
 !s85 0
 !s101 -O0
 vtb_Pipeline
-Z225 IIbz933=OTVE0fbE1Qc`So3
-Z226 V4bmNR6Q<czNF_?@[AOX=M2
+!i10b 1
+!s100 D?1_HhQN56]HGK?Y7z`d52
+I]GD?2=He:U:>HDDO<O4iA1
+Z225 V4bmNR6Q<czNF_?@[AOX=M2
 R4
-Z227 w1717847462
-Z228 8E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v
-Z229 FE:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v
+w1717944085
+Z226 8E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v
+Z227 FE:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v
 L0 5
 R8
 r1
-31
-Z230 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v|
-R10
-Z231 ntb_@pipeline
-!i10b 1
-Z232 !s100 c81Zlz[][b4iO<7;OO2RT0
 !s85 0
-Z233 !s108 1717938894.723000
-Z234 !s107 E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v|
+31
+!s108 1717944467.987000
+!s107 E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v|
+Z228 !s90 -reportprogress|300|-work|work|-O0|E:/Coding/Computer-Organization/Final/ALU/tb_Pipeline.v|
 !s101 -O0
+R10
+Z229 ntb_@pipeline
 vunsign_extend
-!i10b 1
-Z235 !s100 <^aX8VlmXZZ;3YS7[K2K?1
-Z236 IdEXomj_lnXY0Ti<7PSZJz1
-Z237 VMz52WhkbWn]kVY7G0b>iH1
+Z230 !s100 <^aX8VlmXZZ;3YS7[K2K?1
+Z231 IdEXomj_lnXY0Ti<7PSZJz1
+Z232 VMz52WhkbWn]kVY7G0b>iH1
 R4
-Z238 w1717466148
-Z239 8E:/Coding/Computer-Organization/Final/ALU/unsign extend.v
-Z240 FE:/Coding/Computer-Organization/Final/ALU/unsign extend.v
+Z233 w1717466148
+Z234 8E:/Coding/Computer-Organization/Final/ALU/unsign extend.v
+Z235 FE:/Coding/Computer-Organization/Final/ALU/unsign extend.v
 L0 4
 R8
 r1
-!s85 0
 31
-!s108 1717938894.786000
-!s107 E:/Coding/Computer-Organization/Final/ALU/unsign extend.v|
-Z241 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/unsign extend.v|
-!s101 -O0
+Z236 !s90 -reportprogress|300|-work|work|E:/Coding/Computer-Organization/Final/ALU/unsign extend.v|
 R10
+Z237 !s108 1717938894.786000
+Z238 !s107 E:/Coding/Computer-Organization/Final/ALU/unsign extend.v|
+!i10b 1
+!s85 0
+!s101 -O0

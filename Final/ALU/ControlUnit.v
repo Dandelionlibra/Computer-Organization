@@ -113,7 +113,7 @@ begin
 
     else if ( OpCode == ANDI ) // 若當前訊號為讀取 andi rt, rs, immediate
     begin
-      ALUOp = 2'b00 ;
+      ALUOp = 2'b11 ;
       RegDst = 1'b0 ;
       ALUSrc = 1'b1 ;
       Branch = 1'b0 ;

@@ -79,6 +79,7 @@ begin
     case(ALUOp)
         2'b00: ALUOperation = ALU_ADD;
         2'b01: ALUOperation = ALU_SUB;
+        2'b11: ALUOperation = ALU_AND; // andi
         2'b10: 
             case(Funct)
                 Funct_ADD: ALUOperation = ALU_ADD;
