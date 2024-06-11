@@ -6,7 +6,9 @@ input	in3, in2, in1, in0;
 input	[2:0] sel;
 
 // Continuous assigment
-// 根據 sel 選擇要輸出 in0 還是 in1 還是 in2 還是 in3
-assign	out = (sel==3'b000) ? in0 : (sel==2'b001) ? in1 : (sel==3'b010) ? in2 : (sel==3'b111) ? in3 : 1'b0;
+// 根據 sel 選擇要輸出 in0(and) 還是 in1(or) 還是 in2(adder) 還是 0
+assign	out = (sel == 3'b000) ? in0 :
+        (sel == 3'b001) ? in1 :
+        (sel == 3'b010 || sel == 3'b110) ? in2 : 0;
 
 endmodule

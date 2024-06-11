@@ -34,7 +34,7 @@ module tb_Pipeline();
 			else if ( CPU.funct == 6'd34 ) $display( "%d, SUB\n", $time/10-1 );
 			else if ( CPU.funct == 6'd36 ) $display( "%d, AND\n", $time/10-1 );
 			else if ( CPU.funct == 6'd37 ) $display( "%d, OR\n", $time/10-1 );
-			
+			else if ( CPU.funct == 6'd42 ) $display( "%d, SLT\n", $time/10-1 );
 			else if ( CPU.funct == 6'd0  )
 				if(CPU.rs == 0 && CPU.rt == 0 && CPU.rd == 0)
 					$display( "%d, Nop\n", $time/10-1 );

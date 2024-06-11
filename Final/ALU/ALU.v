@@ -65,7 +65,7 @@ ALUbit alu31( .a(dataA[31]), .b(dataB[31]), .bitInvert(bitInvert), .cin(cout[30]
 
 Shifter shifter( .dataA(dataB), .dataB(shamt), .dataOut(shifter_out) );
 
-assign dataOut = (control == ALU_SLL)? shifter_out : alu_out;
+assign dataOut = (control == ALU_SLL)? shifter_out : (control == ALU_SLT) ? {32{set}} : alu_out;
 
 
 endmodule
