@@ -4,14 +4,11 @@
 */
 module tb_Pipeline();
 	reg clk, rst;
-    reg [31:0] cnt;
 	
 	// 產生時脈，週期：10ns
 	initial begin
-        cnt = 0;
 		clk = 1;
 		forever #5 clk = ~clk;
-		
 	end
 
 	initial begin
@@ -59,13 +56,6 @@ module tb_Pipeline();
 		else if ( CPU.opcode == 6'd12 ) $display( "%d, Andi\n", $time/10-1 );
 
 	end
-
-
-
-    always @(posedge clk) begin
-        cnt = cnt + 1;
-        if (cnt == 2000) $stop;
-    end
 	
 	mips_pipeline CPU( clk, rst );
 	
