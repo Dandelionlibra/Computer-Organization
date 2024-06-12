@@ -1,0 +1,182 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# OpenFile C:/CO/Computer-Organization/Final/ALU/tb_Pipeline.v 
+vsim -voptargs=+acc work.tb_Pipeline
+# vsim -voptargs=+acc work.tb_Pipeline 
+# Loading work.tb_Pipeline
+# Loading work.mips_pipeline
+# Loading work.reg32
+# Loading work.add32
+# Loading work.mux2
+# Loading work.memory
+# Loading work.IF_ID
+# Loading work.ControlUnit
+# Loading work.sign_extend
+# Loading work.unsign_extend
+# Loading work.reg_file
+# Loading work.ID_EX
+# Loading work.BEQ
+# Loading work.ALU
+# Loading work.ALUbit
+# Loading work.FullAdder
+# Loading work.ALU_MUX4_1
+# Loading work.Shifter
+# Loading work.MUX2_1
+# Loading work.MUX3_1
+# Loading work.ALUControl
+# Loading work.Multiplier
+# Loading work.HiLo
+# Loading work.EX_MEM
+# Loading work.MEM_WB
+add wave -position insertpoint sim:/tb_Pipeline/CPU/*
+run
+#                    0, reading data: Mem[         x] =>          x
+# 18446744073709551615, PC:         x
+#                    0, reading data: Mem[         0] => 2385444864
+#                    0, reg_file[ 0] =>          0 (Port 2)
+#                    0, reg_file[ 0] =>          0 (Port 1)
+#                    0, PC:         0
+#                    0, wd:          0
+#                    0, Nop
+# 
+#                    1, reading data: Mem[         4] =>          0
+#                    1, reg_file[15] =>         21 (Port 2)
+#                    1, reg_file[17] =>          2 (Port 1)
+#                    1, PC:         4
+#                    1, LW
+# 
+#                    2, reading data: Mem[         8] =>  305201156
+#                    2, reg_file[ 0] =>          0 (Port 2)
+#                    2, reg_file[ 0] =>          0 (Port 1)
+#                    2, PC:         8
+#                    2, wd:          0
+#                    2, Nop
+# 
+#                    3, reading data: Mem[        12] =>          0
+#                    3, reading data: Mem[         2] =>        256
+#                    3, reg_file[17] =>          2 (Port 2)
+#                    3, reg_file[17] =>          2 (Port 1)
+#                    3, PC:        12
+#                    3, BEQ
+# 
+#                    4, reading data: Mem[        28] =>   38834210
+#                    4, reg_file[ 0] =>          0 (Port 2)
+#                    4, reg_file[ 0] =>          0 (Port 1)
+#                    5, reg_file[15] <=        256 (Write)
+#                    4, PC:        28
+#                    4, wd:        256
+#                    4, Nop
+# 
+#                    5, reading data: Mem[        32] =>          0
+#                    5, reg_file[18] =>          3 (Port 1)
+#                    5, reg_file[16] =>          1 (Port 2)
+#                    5, PC:        32
+#                    5, wd:          0
+#                    5, SUB
+# 
+#                    6, reg_file[ 0] =>          0 (Port 2)
+#                    6, reg_file[ 0] =>          0 (Port 1)
+#                    6, PC:        36
+#                    6, wd:          x
+#                    6, Nop
+# 
+#                    7, reading data: Mem[        40] =>   36735008
+#                    7, PC:        40
+#                    7, wd:          0
+#                    7, Nop
+# 
+#                    8, reading data: Mem[        44] =>  134217741
+#                    8, reg_file[16] =>          1 (Port 2)
+#                    8, reg_file[17] =>          2 (Port 1)
+#                    9, reg_file[18] <=          2 (Write)
+#                    8, PC:        44
+#                    8, wd:          2
+#                    8, ADD
+# 
+#                    9, reading data: Mem[        48] =>          0
+#                    9, reg_file[ 0] =>          0 (Port 1)
+#                    9, reg_file[ 0] =>          0 (Port 2)
+#                    9, PC:        48
+#                    9, J
+# 
+#                   10, reading data: Mem[        52] =>   38834213
+run
+#                   10, PC:        52
+#                   10, wd:          0
+#                   10, Nop
+# 
+#                   11, reading data: Mem[        56] =>   36735008
+#                   11, reg_file[16] =>          1 (Port 2)
+#                   11, reg_file[18] =>          2 (Port 1)
+#                   12, reg_file[17] <=          3 (Write)
+#                   11, PC:        56
+#                   11, wd:          3
+#                   11, OR
+# 
+#                   12, reading data: Mem[        60] =>   38834210
+#                   12, reg_file[17] =>          3 (Port 1)
+#                   12, PC:        60
+#                   12, wd:          x
+#                   12, ADD
+# 
+#                   13, reading data: Mem[        64] =>          0
+#                   13, reg_file[18] =>          2 (Port 1)
+#                   13, PC:        64
+#                   13, wd:          0
+#                   13, SUB
+# 
+#                   14, reg_file[ 0] =>          0 (Port 2)
+#                   14, reg_file[ 0] =>          0 (Port 1)
+#                   15, reg_file[18] <=          3 (Write)
+#                   14, PC:        68
+#                   14, wd:          3
+#                   14, Nop
+# 
+#                   15, reading data: Mem[        72] =>   38834213
+#                   16, reg_file[17] <=          4 (Write)
+#                   15, PC:        72
+#                   15, wd:          4
+#                   15, Nop
+# 
+#                   16, reading data: Mem[        76] =>          0
+#                   16, reg_file[18] =>          3 (Port 1)
+#                   16, reg_file[16] =>          1 (Port 2)
+#                   17, reg_file[18] <=          1 (Write)
+#                   16, PC:        76
+#                   16, wd:          1
+#                   16, OR
+# 
+#                   17, reg_file[ 0] =>          0 (Port 1)
+#                   17, reg_file[ 0] =>          0 (Port 2)
+#                   17, PC:        80
+#                   17, wd:          0
+#                   17, Nop
+# 
+#                   18, reading data: Mem[        84] => 2886860824
+#                   18, PC:        84
+#                   18, wd:          0
+#                   18, Nop
+# 
+#                   19, reading data: Mem[        88] =>          x
+#                   19, reg_file[18] =>          1 (Port 2)
+#                   20, reg_file[18] <=          3 (Write)
+#                   19, PC:        88
+#                   19, SW
+# 
+# control_single unimplemented opcode  x
+#                   20, reg_file[ x] =>          x (Port 1)
+#                   20, reg_file[ x] =>          x (Port 2)
+run
+#                   20, PC:        92
+#                   22, writing data: Mem[        24] <=          1
+#                   21, PC:         x
+#                   22, PC:         x
+#                   23, PC:         x
+#                   24, PC:         x
+#                   25, PC:         x
+#                   26, PC:         x
+#                   27, PC:         x
+#                   28, PC:         x
+#                   29, PC:         x
+# Error opening E:/Coding/Computer-Organization/Final/ALU/mips_pipeline.v
+# Path name 'E:/Coding/Computer-Organization/Final/ALU/mips_pipeline.v' doesn't exist.
+quit -sim
